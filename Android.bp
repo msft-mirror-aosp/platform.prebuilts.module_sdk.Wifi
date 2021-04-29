@@ -1,0 +1,37 @@
+
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+java_sdk_library_import {
+    name: "framework-wifi",
+    owner: "google",
+    prefer: false,
+    shared_library: false,
+    apex_available: [
+        "com.android.wifi",
+        "test_com.android.wifi",
+    ],
+    public: {
+        jars: ["current/public/framework-wifi.jar"],
+        stub_srcs: ["current/public/framework-wifi.srcjar"],
+        current_api: "current/public/framework-wifi.txt",
+        removed_api: "current/public/framework-wifi-removed.txt",
+        sdk_version: "module_current",
+    },
+    system: {
+        jars: ["current/system/framework-wifi.jar"],
+        stub_srcs: ["current/system/framework-wifi.srcjar"],
+        current_api: "current/system/framework-wifi.txt",
+        removed_api: "current/system/framework-wifi-removed.txt",
+        sdk_version: "module_current",
+    },
+    module_lib: {
+        jars: ["current/module_lib/framework-wifi.jar"],
+        stub_srcs: ["current/module_lib/framework-wifi.srcjar"],
+        current_api: "current/module_lib/framework-wifi.txt",
+        removed_api: "current/module_lib/framework-wifi-removed.txt",
+        sdk_version: "module_current",
+    },
+}
