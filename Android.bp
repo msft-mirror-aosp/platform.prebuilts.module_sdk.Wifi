@@ -1,37 +1,94 @@
-
+// This is auto-generated. DO NOT EDIT.
 
 package {
+    // A default list here prevents the license LSC from adding its own list which would
+    // be unnecessary as every module in the sdk already has its own licenses property.
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
 java_sdk_library_import {
-    name: "framework-wifi",
-    owner: "google",
-    prefer: false,
-    shared_library: false,
+    name: "wifi-module-sdk_framework-wifi@current",
+    sdk_member_name: "framework-wifi",
+    visibility: ["//visibility:public"],
     apex_available: [
         "com.android.wifi",
         "test_com.android.wifi",
     ],
+    licenses: ["wifi-module-sdk_Android-Apache-2.0@current"],
+    shared_library: false,
     public: {
-        jars: ["current/public/framework-wifi.jar"],
-        stub_srcs: ["current/public/framework-wifi.srcjar"],
-        current_api: "current/public/framework-wifi.txt",
-        removed_api: "current/public/framework-wifi-removed.txt",
+        jars: ["sdk_library/public/framework-wifi-stubs.jar"],
+        stub_srcs: ["sdk_library/public/framework-wifi.srcjar"],
+        current_api: "sdk_library/public/framework-wifi.txt",
+        removed_api: "sdk_library/public/framework-wifi-removed.txt",
         sdk_version: "module_current",
     },
     system: {
-        jars: ["current/system/framework-wifi.jar"],
-        stub_srcs: ["current/system/framework-wifi.srcjar"],
-        current_api: "current/system/framework-wifi.txt",
-        removed_api: "current/system/framework-wifi-removed.txt",
+        jars: ["sdk_library/system/framework-wifi-stubs.jar"],
+        stub_srcs: ["sdk_library/system/framework-wifi.srcjar"],
+        current_api: "sdk_library/system/framework-wifi.txt",
+        removed_api: "sdk_library/system/framework-wifi-removed.txt",
         sdk_version: "module_current",
     },
     module_lib: {
-        jars: ["current/module_lib/framework-wifi.jar"],
-        stub_srcs: ["current/module_lib/framework-wifi.srcjar"],
-        current_api: "current/module_lib/framework-wifi.txt",
-        removed_api: "current/module_lib/framework-wifi-removed.txt",
+        jars: ["sdk_library/module-lib/framework-wifi-stubs.jar"],
+        stub_srcs: ["sdk_library/module-lib/framework-wifi.srcjar"],
+        current_api: "sdk_library/module-lib/framework-wifi.txt",
+        removed_api: "sdk_library/module-lib/framework-wifi-removed.txt",
         sdk_version: "module_current",
     },
+}
+
+java_sdk_library_import {
+    name: "framework-wifi",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: [
+        "com.android.wifi",
+        "test_com.android.wifi",
+    ],
+    licenses: ["wifi-module-sdk_Android-Apache-2.0"],
+    shared_library: false,
+    public: {
+        jars: ["sdk_library/public/framework-wifi-stubs.jar"],
+        stub_srcs: ["sdk_library/public/framework-wifi.srcjar"],
+        current_api: "sdk_library/public/framework-wifi.txt",
+        removed_api: "sdk_library/public/framework-wifi-removed.txt",
+        sdk_version: "module_current",
+    },
+    system: {
+        jars: ["sdk_library/system/framework-wifi-stubs.jar"],
+        stub_srcs: ["sdk_library/system/framework-wifi.srcjar"],
+        current_api: "sdk_library/system/framework-wifi.txt",
+        removed_api: "sdk_library/system/framework-wifi-removed.txt",
+        sdk_version: "module_current",
+    },
+    module_lib: {
+        jars: ["sdk_library/module-lib/framework-wifi-stubs.jar"],
+        stub_srcs: ["sdk_library/module-lib/framework-wifi.srcjar"],
+        current_api: "sdk_library/module-lib/framework-wifi.txt",
+        removed_api: "sdk_library/module-lib/framework-wifi-removed.txt",
+        sdk_version: "module_current",
+    },
+}
+
+license {
+    name: "wifi-module-sdk_Android-Apache-2.0@current",
+    sdk_member_name: "Android-Apache-2.0",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/build/soong/licenses/LICENSE"],
+}
+
+license {
+    name: "wifi-module-sdk_Android-Apache-2.0",
+    visibility: ["//visibility:private"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["licenses/build/soong/licenses/LICENSE"],
+}
+
+sdk_snapshot {
+    name: "wifi-module-sdk@current",
+    visibility: ["//visibility:public"],
+    java_sdk_libs: ["wifi-module-sdk_framework-wifi@current"],
 }
