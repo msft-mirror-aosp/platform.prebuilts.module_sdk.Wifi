@@ -4,7 +4,7 @@ drops {
     target: "mainline_modules-user"
     source_file: "mainline-sdks/wifi-module-sdk-current.zip"
   }
-  dest_file: "unused"
+  dest_file: "current/current.zip"
   version: ""
   version_group: ""
   git_project: "platform/prebuilts/module_sdk/Wifi"
