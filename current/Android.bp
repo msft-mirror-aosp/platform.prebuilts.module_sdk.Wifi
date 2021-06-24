@@ -6,6 +6,24 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
+prebuilt_bootclasspath_fragment {
+    name: "wifi-module-sdk_com.android.wifi-bootclasspath-fragment@current",
+    sdk_member_name: "com.android.wifi-bootclasspath-fragment",
+    visibility: ["//visibility:public"],
+    apex_available: ["com.android.wifi"],
+    licenses: ["wifi-module-sdk_Android-Apache-2.0@current"],
+    contents: ["wifi-module-sdk_framework-wifi@current"],
+}
+
+prebuilt_bootclasspath_fragment {
+    name: "com.android.wifi-bootclasspath-fragment",
+    prefer: false,
+    visibility: ["//visibility:public"],
+    apex_available: ["com.android.wifi"],
+    licenses: ["wifi-module-sdk_Android-Apache-2.0"],
+    contents: ["framework-wifi"],
+}
+
 java_sdk_library_import {
     name: "wifi-module-sdk_framework-wifi@current",
     sdk_member_name: "framework-wifi",
@@ -90,5 +108,6 @@ license {
 sdk_snapshot {
     name: "wifi-module-sdk@current",
     visibility: ["//visibility:public"],
+    bootclasspath_fragments: ["wifi-module-sdk_com.android.wifi-bootclasspath-fragment@current"],
     java_sdk_libs: ["wifi-module-sdk_framework-wifi@current"],
 }
