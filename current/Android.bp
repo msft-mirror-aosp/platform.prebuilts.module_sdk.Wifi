@@ -13,6 +13,16 @@ prebuilt_bootclasspath_fragment {
     apex_available: ["com.android.wifi"],
     licenses: ["wifi-module-sdk_Android-Apache-2.0@current"],
     contents: ["wifi-module-sdk_framework-wifi@current"],
+    hidden_api: {
+        unsupported: ["hiddenapi/hiddenapi-unsupported.txt"],
+        max_target_r_low_priority: ["hiddenapi/hiddenapi-max-target-r-low-priority.txt"],
+        max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
+        stub_flags: "hiddenapi/stub-flags.csv",
+        annotation_flags: "hiddenapi/annotation-flags.csv",
+        metadata: "hiddenapi/metadata.csv",
+        index: "hiddenapi/index.csv",
+        all_flags: "hiddenapi/all-flags.csv",
+    },
 }
 
 prebuilt_bootclasspath_fragment {
@@ -22,6 +32,16 @@ prebuilt_bootclasspath_fragment {
     apex_available: ["com.android.wifi"],
     licenses: ["wifi-module-sdk_Android-Apache-2.0"],
     contents: ["framework-wifi"],
+    hidden_api: {
+        unsupported: ["hiddenapi/hiddenapi-unsupported.txt"],
+        max_target_r_low_priority: ["hiddenapi/hiddenapi-max-target-r-low-priority.txt"],
+        max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
+        stub_flags: "hiddenapi/stub-flags.csv",
+        annotation_flags: "hiddenapi/annotation-flags.csv",
+        metadata: "hiddenapi/metadata.csv",
+        index: "hiddenapi/index.csv",
+        all_flags: "hiddenapi/all-flags.csv",
+    },
 }
 
 java_sdk_library_import {
