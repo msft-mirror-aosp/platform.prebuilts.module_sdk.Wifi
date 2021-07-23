@@ -54,6 +54,11 @@ java_sdk_library_import {
     ],
     licenses: ["wifi-module-sdk_Android-Apache-2.0@current"],
     shared_library: false,
+    permitted_packages: [
+        "android.hardware.wifi",
+        "android.net.wifi",
+        "com.android.wifi.x",
+    ],
     public: {
         jars: ["sdk_library/public/framework-wifi-stubs.jar"],
         stub_srcs: ["sdk_library/public/framework-wifi.srcjar"],
@@ -87,6 +92,11 @@ java_sdk_library_import {
     ],
     licenses: ["wifi-module-sdk_Android-Apache-2.0"],
     shared_library: false,
+    permitted_packages: [
+        "android.hardware.wifi",
+        "android.net.wifi",
+        "com.android.wifi.x",
+    ],
     public: {
         jars: ["sdk_library/public/framework-wifi-stubs.jar"],
         stub_srcs: ["sdk_library/public/framework-wifi.srcjar"],
