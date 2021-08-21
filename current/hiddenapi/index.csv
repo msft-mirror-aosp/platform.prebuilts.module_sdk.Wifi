@@ -48,8 +48,8 @@ Landroid/net/wifi/WifiConfiguration;->setProxySettings(Landroid/net/IpConfigurat
 Landroid/net/wifi/WifiConfiguration;->setProxy(Landroid/net/IpConfiguration$ProxySettings;Landroid/net/ProxyInfo;)V,packages/modules/Wifi/framework/java/android/net/wifi/WifiConfiguration.java,3525,5,3525,25,
 Landroid/net/wifi/WifiConfiguration;->CREATOR:Landroid/os/Parcelable$Creator;,packages/modules/Wifi/framework/java/android/net/wifi/WifiConfiguration.java,3721,5,3721,25,
 Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;,packages/modules/Wifi/framework/java/android/net/wifi/WifiEnterpriseConfig.java,250,5,250,25,
-Landroid/net/wifi/WifiEnterpriseConfig;->setCaCertificateAlias(Ljava/lang/String;)V,packages/modules/Wifi/framework/java/android/net/wifi/WifiEnterpriseConfig.java,708,5,708,25,
-Landroid/net/wifi/WifiEnterpriseConfig;->getCaCertificateAlias()Ljava/lang/String;,packages/modules/Wifi/framework/java/android/net/wifi/WifiEnterpriseConfig.java,749,5,749,25,
+Landroid/net/wifi/WifiEnterpriseConfig;->setCaCertificateAlias(Ljava/lang/String;)V,packages/modules/Wifi/framework/java/android/net/wifi/WifiEnterpriseConfig.java,704,5,704,25,
+Landroid/net/wifi/WifiEnterpriseConfig;->getCaCertificateAlias()Ljava/lang/String;,packages/modules/Wifi/framework/java/android/net/wifi/WifiEnterpriseConfig.java,745,5,745,25,
 Landroid/net/wifi/WifiInfo;->mBSSID:Ljava/lang/String;,packages/modules/Wifi/framework/java/android/net/wifi/WifiInfo.java,108,5,108,88,maxTargetSdk=28&trackingBug=115609023L
 Landroid/net/wifi/WifiInfo;->mWifiSsid:Landroid/net/wifi/WifiSsid;,packages/modules/Wifi/framework/java/android/net/wifi/WifiInfo.java,110,5,110,25,
 Landroid/net/wifi/WifiInfo;->mIpAddress:Ljava/net/InetAddress;,packages/modules/Wifi/framework/java/android/net/wifi/WifiInfo.java,244,5,244,25,
