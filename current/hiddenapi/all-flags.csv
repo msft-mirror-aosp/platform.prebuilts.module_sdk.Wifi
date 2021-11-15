@@ -1363,6 +1363,7 @@ Landroid/net/wifi/ScanResult$InformationElement;-><init>(II[B)V,blocked
 Landroid/net/wifi/ScanResult$InformationElement;-><init>(Landroid/net/wifi/ScanResult$InformationElement;)V,public-api,sdk,system-api,test-api
 Landroid/net/wifi/ScanResult$InformationElement;->CREATOR:Landroid/os/Parcelable$Creator;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/ScanResult$InformationElement;->EID_BSS_LOAD:I,max-target-r
+Landroid/net/wifi/ScanResult$InformationElement;->EID_COUNTRY:I,blocked
 Landroid/net/wifi/ScanResult$InformationElement;->EID_ERP:I,max-target-r
 Landroid/net/wifi/ScanResult$InformationElement;->EID_EXTENDED_CAPS:I,max-target-r
 Landroid/net/wifi/ScanResult$InformationElement;->EID_EXTENDED_SUPPORTED_RATES:I,max-target-r
@@ -7500,6 +7501,7 @@ Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->any(Landroid/u
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->any(Ljava/util/Collection;Ljava/util/function/Predicate;)Z,blocked
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->contains([II)Z,blocked
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z,blocked
+Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->contains([SS)Z,blocked
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->filter(Ljava/util/Collection;Ljava/util/function/Predicate;)Ljava/util/ArrayList;,blocked
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->indexOf(Ljava/util/Collection;Ljava/util/function/Predicate;)I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->indexOf([Ljava/lang/Object;Ljava/lang/Object;)I,blocked
@@ -7710,7 +7712,6 @@ Lcom/android/wifi/x/com/android/net/module/util/NetworkCapabilitiesUtils;->NET_C
 Lcom/android/wifi/x/com/android/net/module/util/NetworkCapabilitiesUtils;->NET_CAPABILITY_VEHICLE_INTERNAL:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkCapabilitiesUtils;->NET_CAPABILITY_VSIM:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkCapabilitiesUtils;->RESTRICTED_CAPABILITIES:J,blocked
-Lcom/android/wifi/x/com/android/net/module/util/NetworkCapabilitiesUtils;->TRANSPORT_USB:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkCapabilitiesUtils;->UNRESTRICTED_CAPABILITIES:J,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkCapabilitiesUtils;->getDisplayTransport([I)I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkCapabilitiesUtils;->inferRestrictedCapability(Landroid/net/NetworkCapabilities;)Z,blocked
@@ -7744,6 +7745,7 @@ Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_C
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_ECHO_REPLY_TYPE:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_ECHO_REQUEST_TYPE:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_HEADER_MIN_LEN:I,blocked
+Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_NA_HEADER_LEN:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_ND_OPTION_LENGTH_SCALING_FACTOR:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_ND_OPTION_MIN_LENGTH:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_ND_OPTION_MTU:I,blocked
@@ -7754,9 +7756,11 @@ Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_N
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_ND_OPTION_TLLA:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_NEIGHBOR_ADVERTISEMENT:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_NEIGHBOR_SOLICITATION:I,blocked
+Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_NS_HEADER_LEN:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_RA_HEADER_LEN:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_ROUTER_ADVERTISEMENT:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_ROUTER_SOLICITATION:I,blocked
+Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->ICMPV6_RS_HEADER_LEN:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->INFINITE_LEASE:I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->IPV4_ADDR_ALL:Ljava/net/Inet4Address;,blocked
 Lcom/android/wifi/x/com/android/net/module/util/NetworkStackConstants;->IPV4_ADDR_ANY:Ljava/net/Inet4Address;,blocked
