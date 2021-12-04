@@ -6,6 +6,14 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
+soong_config_module_type_import {
+    from: "packages/modules/common/Android.bp",
+    module_types: [
+        "module_java_sdk_library_import",
+        "module_prebuilt_bootclasspath_fragment",
+    ],
+}
+
 prebuilt_bootclasspath_fragment {
     name: "wifi-module-sdk_com.android.wifi-bootclasspath-fragment@current",
     sdk_member_name: "com.android.wifi-bootclasspath-fragment",
@@ -25,9 +33,14 @@ prebuilt_bootclasspath_fragment {
     },
 }
 
-prebuilt_bootclasspath_fragment {
+module_prebuilt_bootclasspath_fragment {
     name: "com.android.wifi-bootclasspath-fragment",
     prefer: true,
+    soong_config_variables: {
+        module_build_from_source: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: ["com.android.wifi"],
     licenses: ["wifi-module-sdk_Android-Apache-2.0"],
@@ -82,9 +95,14 @@ java_sdk_library_import {
     },
 }
 
-java_sdk_library_import {
+module_java_sdk_library_import {
     name: "framework-wifi",
     prefer: true,
+    soong_config_variables: {
+        module_build_from_source: {
+            prefer: false,
+        },
+    },
     visibility: ["//visibility:public"],
     apex_available: [
         "com.android.wifi",
