@@ -1,8 +1,8 @@
 drops {
   android_build_drop {
-    build_id: "7801381"
+    build_id: "7999070"
     target: "mainline_modules-user"
-    source_file: "mainline-sdks/wifi-module-sdk-current.zip"
+    source_file: "mainline-sdks/current/com.google.android.wifi/sdk/wifi-module-sdk-current.zip"
   }
   dest_file: "current/current.zip"
   version: ""
