@@ -1363,6 +1363,7 @@ Landroid/net/wifi/ScanResult$InformationElement;-><init>(II[B)V,blocked
 Landroid/net/wifi/ScanResult$InformationElement;-><init>(Landroid/net/wifi/ScanResult$InformationElement;)V,public-api,sdk,system-api,test-api
 Landroid/net/wifi/ScanResult$InformationElement;->CREATOR:Landroid/os/Parcelable$Creator;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/ScanResult$InformationElement;->EID_BSS_LOAD:I,max-target-r
+Landroid/net/wifi/ScanResult$InformationElement;->EID_COUNTRY:I,blocked
 Landroid/net/wifi/ScanResult$InformationElement;->EID_ERP:I,max-target-r
 Landroid/net/wifi/ScanResult$InformationElement;->EID_EXTENDED_CAPS:I,max-target-r
 Landroid/net/wifi/ScanResult$InformationElement;->EID_EXTENDED_SUPPORTED_RATES:I,max-target-r
@@ -7500,6 +7501,7 @@ Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->any(Landroid/u
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->any(Ljava/util/Collection;Ljava/util/function/Predicate;)Z,blocked
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->contains([II)Z,blocked
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z,blocked
+Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->contains([SS)Z,blocked
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->filter(Ljava/util/Collection;Ljava/util/function/Predicate;)Ljava/util/ArrayList;,blocked
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->indexOf(Ljava/util/Collection;Ljava/util/function/Predicate;)I,blocked
 Lcom/android/wifi/x/com/android/net/module/util/CollectionUtils;->indexOf([Ljava/lang/Object;Ljava/lang/Object;)I,blocked
