@@ -1,17 +1,18 @@
 // This is auto-generated. DO NOT EDIT.
 
-package {
-    // A default list here prevents the license LSC from adding its own list which would
-    // be unnecessary as every module in the sdk already has its own licenses property.
-    default_applicable_licenses: ["Android-Apache-2.0"],
-}
-
+// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
 soong_config_module_type_import {
     from: "packages/modules/common/Android.bp",
     module_types: [
         "module_java_sdk_library_import",
         "module_prebuilt_bootclasspath_fragment",
     ],
+}
+
+package {
+    // A default list here prevents the license LSC from adding its own list which would
+    // be unnecessary as every module in the sdk already has its own licenses property.
+    default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
 prebuilt_bootclasspath_fragment {
@@ -35,7 +36,8 @@ prebuilt_bootclasspath_fragment {
 
 module_prebuilt_bootclasspath_fragment {
     name: "com.android.wifi-bootclasspath-fragment",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_ANDROID_module_build_from_source is true.
+    prefer: true,
     soong_config_variables: {
         module_build_from_source: {
             prefer: false,
@@ -77,7 +79,6 @@ java_sdk_library_import {
         stub_srcs: ["sdk_library/public/framework-wifi.srcjar"],
         current_api: "sdk_library/public/framework-wifi.txt",
         removed_api: "sdk_library/public/framework-wifi-removed.txt",
-        annotations: "sdk_library/public/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
     system: {
@@ -85,7 +86,6 @@ java_sdk_library_import {
         stub_srcs: ["sdk_library/system/framework-wifi.srcjar"],
         current_api: "sdk_library/system/framework-wifi.txt",
         removed_api: "sdk_library/system/framework-wifi-removed.txt",
-        annotations: "sdk_library/system/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
     module_lib: {
@@ -93,14 +93,14 @@ java_sdk_library_import {
         stub_srcs: ["sdk_library/module-lib/framework-wifi.srcjar"],
         current_api: "sdk_library/module-lib/framework-wifi.txt",
         removed_api: "sdk_library/module-lib/framework-wifi-removed.txt",
-        annotations: "sdk_library/module-lib/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
 }
 
 module_java_sdk_library_import {
     name: "framework-wifi",
-    prefer: false,
+    // Do not prefer prebuilt if SOONG_CONFIG_ANDROID_module_build_from_source is true.
+    prefer: true,
     soong_config_variables: {
         module_build_from_source: {
             prefer: false,
@@ -123,7 +123,6 @@ module_java_sdk_library_import {
         stub_srcs: ["sdk_library/public/framework-wifi.srcjar"],
         current_api: "sdk_library/public/framework-wifi.txt",
         removed_api: "sdk_library/public/framework-wifi-removed.txt",
-        annotations: "sdk_library/public/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
     system: {
@@ -131,7 +130,6 @@ module_java_sdk_library_import {
         stub_srcs: ["sdk_library/system/framework-wifi.srcjar"],
         current_api: "sdk_library/system/framework-wifi.txt",
         removed_api: "sdk_library/system/framework-wifi-removed.txt",
-        annotations: "sdk_library/system/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
     module_lib: {
@@ -139,7 +137,6 @@ module_java_sdk_library_import {
         stub_srcs: ["sdk_library/module-lib/framework-wifi.srcjar"],
         current_api: "sdk_library/module-lib/framework-wifi.txt",
         removed_api: "sdk_library/module-lib/framework-wifi-removed.txt",
-        annotations: "sdk_library/module-lib/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
 }
