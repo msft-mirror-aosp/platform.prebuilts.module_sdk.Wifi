@@ -27,7 +27,7 @@ signature,maxTargetSdk,overrideSourcePosition,publicAlternatives,trackingBug
 |Landroid/net/wifi/ScanResult;->is80211McRTTResponder:Z|,|30|,||,||,|170729553|
 |Landroid/net/wifi/ScanResult;->numUsage:I|,||,||,||,||
 |Landroid/net/wifi/ScanResult;->seen:J|,||,||,||,||
-|Landroid/net/wifi/ScanResult;->wifiSsid:Landroid/net/wifi/WifiSsid;|,||,||,|{@link #getWifiSsid()}|,||
+|Landroid/net/wifi/ScanResult;->wifiSsid:Landroid/net/wifi/WifiSsid;|,|31|,||,|{@link #getWifiSsid()}|,||
 |Landroid/net/wifi/WifiConfiguration;->CREATOR:Landroid/os/Parcelable$Creator;|,||,||,||,||
 |Landroid/net/wifi/WifiConfiguration;->INVALID_RSSI:I|,|28|,||,||,|115609023|
 |Landroid/net/wifi/WifiConfiguration;->apBand:I|,||,||,||,||
@@ -80,10 +80,10 @@ signature,maxTargetSdk,overrideSourcePosition,publicAlternatives,trackingBug
 |Landroid/net/wifi/WifiManager;->initializeMulticastFiltering()Z|,||,||,||,||
 |Landroid/net/wifi/WifiManager;->mActiveLockCount:I|,||,||,||,||
 |Landroid/net/wifi/WifiManager;->mService:Landroid/net/wifi/IWifiManager;|,||,||,||,||
-|Landroid/net/wifi/WifiSsid;->NONE:Ljava/lang/String;|,||,||,|{@link android.net.wifi.WifiManager#UNKNOWN_SSID}|,||
-|Landroid/net/wifi/WifiSsid;->createFromAsciiEncoded(Ljava/lang/String;)Landroid/net/wifi/WifiSsid;|,||,||,|{@link #fromBytes(byte[])}|,||
-|Landroid/net/wifi/WifiSsid;->getOctets()[B|,||,||,|{@link #getBytes()}|,||
-|Landroid/net/wifi/WifiSsid;->octets:Ljava/io/ByteArrayOutputStream;|,||,||,|{@link #getBytes()}|,||
+|Landroid/net/wifi/WifiSsid;->NONE:Ljava/lang/String;|,|31|,||,|{@link android.net.wifi.WifiManager#UNKNOWN_SSID}|,||
+|Landroid/net/wifi/WifiSsid;->createFromAsciiEncoded(Ljava/lang/String;)Landroid/net/wifi/WifiSsid;|,|31|,||,|{@link #fromBytes(byte[])}|,||
+|Landroid/net/wifi/WifiSsid;->getOctets()[B|,|31|,||,|{@link #getBytes()}|,||
+|Landroid/net/wifi/WifiSsid;->octets:Ljava/io/ByteArrayOutputStream;|,|31|,||,|{@link #getBytes()}|,||
 |Landroid/net/wifi/p2p/WifiP2pConfig;-><init>(Ljava/lang/String;)V|,||,||,||,||
 |Landroid/net/wifi/p2p/WifiP2pConfig;->netId:I|,|30|,||,||,|170729553|
 |Landroid/net/wifi/p2p/WifiP2pDevice;-><init>(Ljava/lang/String;)V|,|30|,||,||,|170729553|
