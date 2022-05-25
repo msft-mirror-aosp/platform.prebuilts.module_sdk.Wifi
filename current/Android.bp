@@ -78,6 +78,7 @@ java_sdk_library_import {
         stub_srcs: ["sdk_library/public/framework-wifi.srcjar"],
         current_api: "sdk_library/public/framework-wifi.txt",
         removed_api: "sdk_library/public/framework-wifi-removed.txt",
+        annotations: "sdk_library/public/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
     system: {
@@ -85,6 +86,7 @@ java_sdk_library_import {
         stub_srcs: ["sdk_library/system/framework-wifi.srcjar"],
         current_api: "sdk_library/system/framework-wifi.txt",
         removed_api: "sdk_library/system/framework-wifi-removed.txt",
+        annotations: "sdk_library/system/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
     module_lib: {
@@ -92,6 +94,7 @@ java_sdk_library_import {
         stub_srcs: ["sdk_library/module-lib/framework-wifi.srcjar"],
         current_api: "sdk_library/module-lib/framework-wifi.txt",
         removed_api: "sdk_library/module-lib/framework-wifi-removed.txt",
+        annotations: "sdk_library/module-lib/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
 }
@@ -121,6 +124,7 @@ module_java_sdk_library_import {
         stub_srcs: ["sdk_library/public/framework-wifi.srcjar"],
         current_api: "sdk_library/public/framework-wifi.txt",
         removed_api: "sdk_library/public/framework-wifi-removed.txt",
+        annotations: "sdk_library/public/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
     system: {
@@ -128,6 +132,7 @@ module_java_sdk_library_import {
         stub_srcs: ["sdk_library/system/framework-wifi.srcjar"],
         current_api: "sdk_library/system/framework-wifi.txt",
         removed_api: "sdk_library/system/framework-wifi-removed.txt",
+        annotations: "sdk_library/system/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
     module_lib: {
@@ -135,6 +140,7 @@ module_java_sdk_library_import {
         stub_srcs: ["sdk_library/module-lib/framework-wifi.srcjar"],
         current_api: "sdk_library/module-lib/framework-wifi.txt",
         removed_api: "sdk_library/module-lib/framework-wifi-removed.txt",
+        annotations: "sdk_library/module-lib/framework-wifi_annotations.zip",
         sdk_version: "module_current",
     },
 }
