@@ -447,9 +447,13 @@ Landroid/net/wifi/ScanResult;->timestamp:J,public-api,system-api,test-api
 Landroid/net/wifi/ScanResult;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Landroid/net/wifi/ScanResult;->venueName:Ljava/lang/CharSequence;,public-api,system-api,test-api
 Landroid/net/wifi/ScanResult;->writeToParcel(Landroid/os/Parcel;I)V,public-api,system-api,test-api
+Landroid/net/wifi/SecurityParams$1;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;,public-api,system-api,test-api
+Landroid/net/wifi/SecurityParams$1;->newArray(I)[Ljava/lang/Object;,public-api,system-api,test-api
+Landroid/net/wifi/SecurityParams;->describeContents()I,public-api,system-api,test-api
 Landroid/net/wifi/SecurityParams;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Landroid/net/wifi/SecurityParams;->hashCode()I,core-platform-api,public-api,system-api,test-api
 Landroid/net/wifi/SecurityParams;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
+Landroid/net/wifi/SecurityParams;->writeToParcel(Landroid/os/Parcel;I)V,public-api,system-api,test-api
 Landroid/net/wifi/SoftApCapability$1;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;,public-api,system-api,test-api
 Landroid/net/wifi/SoftApCapability$1;->newArray(I)[Ljava/lang/Object;,public-api,system-api,test-api
 Landroid/net/wifi/SoftApCapability;->CREATOR:Landroid/os/Parcelable$Creator;,system-api,test-api
