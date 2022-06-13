@@ -734,9 +734,13 @@ Landroid/net/wifi/ScanResult;->untrusted:Z,removed,unsupported
 Landroid/net/wifi/ScanResult;->venueName:Ljava/lang/CharSequence;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/ScanResult;->wifiSsid:Landroid/net/wifi/WifiSsid;,unsupported
 Landroid/net/wifi/ScanResult;->writeToParcel(Landroid/os/Parcel;I)V,public-api,sdk,system-api,test-api
+Landroid/net/wifi/SecurityParams$1;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;,public-api,sdk,system-api,test-api
+Landroid/net/wifi/SecurityParams$1;->newArray(I)[Ljava/lang/Object;,public-api,sdk,system-api,test-api
+Landroid/net/wifi/SecurityParams;->describeContents()I,public-api,sdk,system-api,test-api
 Landroid/net/wifi/SecurityParams;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/net/wifi/SecurityParams;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/net/wifi/SecurityParams;->toString()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
+Landroid/net/wifi/SecurityParams;->writeToParcel(Landroid/os/Parcel;I)V,public-api,sdk,system-api,test-api
 Landroid/net/wifi/SoftApCapability$1;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/SoftApCapability$1;->newArray(I)[Ljava/lang/Object;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/SoftApCapability;->CREATOR:Landroid/os/Parcelable$Creator;,sdk,system-api,test-api
@@ -1048,7 +1052,6 @@ Landroid/net/wifi/WifiConfiguration$NetworkSelectionStatus;->setNetworkSelection
 Landroid/net/wifi/WifiConfiguration$NetworkSelectionStatus;->setNetworkSelectionDisableReason(I)V,lo-prio,max-target-o
 Landroid/net/wifi/WifiConfiguration$NetworkSelectionStatus;->setNetworkSelectionStatus(I)V,lo-prio,max-target-o
 Landroid/net/wifi/WifiConfiguration$NetworkSelectionStatus;->setSeenInLastQualifiedNetworkSelection(Z)V,lo-prio,max-target-o
-Landroid/net/wifi/WifiConfiguration$NetworkSelectionStatus;->writeToParcel(Landroid/os/Parcel;)V,lo-prio,max-target-o
 Landroid/net/wifi/WifiConfiguration$PairwiseCipher;-><init>()V,lo-prio,max-target-o
 Landroid/net/wifi/WifiConfiguration$PairwiseCipher;->CCMP:I,public-api,sdk,system-api,test-api
 Landroid/net/wifi/WifiConfiguration$PairwiseCipher;->GCMP_128:I,public-api,sdk,system-api,test-api
