@@ -79,6 +79,7 @@ Landroid/net/wifi/WifiManager;->enableVerboseLogging(I)V,max-target-q
 Landroid/net/wifi/WifiManager;->initializeMulticastFiltering()Z,unsupported
 Landroid/net/wifi/WifiManager;->mActiveLockCount:I,unsupported
 Landroid/net/wifi/WifiManager;->mService:Landroid/net/wifi/IWifiManager;,unsupported
+Landroid/net/wifi/WifiSsid;->CREATOR:Landroid/os/Parcelable$Creator;,unsupported
 Landroid/net/wifi/WifiSsid;->NONE:Ljava/lang/String;,unsupported
 Landroid/net/wifi/WifiSsid;->createFromAsciiEncoded(Ljava/lang/String;)Landroid/net/wifi/WifiSsid;,unsupported
 Landroid/net/wifi/WifiSsid;->getOctets()[B,unsupported
