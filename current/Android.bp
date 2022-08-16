@@ -1,12 +1,39 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
-soong_config_module_type_import {
-    from: "packages/modules/common/Android.bp",
-    module_types: [
-        "module_java_sdk_library_import",
-        "module_prebuilt_bootclasspath_fragment",
-    ],
+// Soong config variable module type added by vendor/google/build/mainline_modules_sdks.py.
+soong_config_module_type {
+    name: "wifi_prebuilt_java_import",
+    module_type: "java_import",
+    config_namespace: "wifi_module",
+    bool_variables: ["source_build"],
+    properties: ["prefer"],
+}
+
+// Soong config variable module type added by vendor/google/build/mainline_modules_sdks.py.
+soong_config_module_type {
+    name: "wifi_prebuilt_java_sdk_library_import",
+    module_type: "java_sdk_library_import",
+    config_namespace: "wifi_module",
+    bool_variables: ["source_build"],
+    properties: ["prefer"],
+}
+
+// Soong config variable module type added by vendor/google/build/mainline_modules_sdks.py.
+soong_config_module_type {
+    name: "wifi_prebuilt_prebuilt_bootclasspath_fragment",
+    module_type: "prebuilt_bootclasspath_fragment",
+    config_namespace: "wifi_module",
+    bool_variables: ["source_build"],
+    properties: ["prefer"],
+}
+
+// Soong config variable module type added by vendor/google/build/mainline_modules_sdks.py.
+soong_config_module_type {
+    name: "wifi_prebuilt_prebuilt_systemserverclasspath_fragment",
+    module_type: "prebuilt_systemserverclasspath_fragment",
+    config_namespace: "wifi_module",
+    bool_variables: ["source_build"],
+    properties: ["prefer"],
 }
 
 package {
@@ -22,23 +49,31 @@ prebuilt_bootclasspath_fragment {
     apex_available: ["com.android.wifi"],
     licenses: ["wifi-module-sdk_Android-Apache-2.0@current"],
     contents: ["wifi-module-sdk_framework-wifi@current"],
+    fragments: [
+        {
+            apex: "com.android.art",
+            module: "art-bootclasspath-fragment",
+        },
+    ],
     hidden_api: {
         unsupported: ["hiddenapi/hiddenapi-unsupported.txt"],
         max_target_r_low_priority: ["hiddenapi/hiddenapi-max-target-r-low-priority.txt"],
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
-        stub_flags: "hiddenapi/stub-flags.csv",
         annotation_flags: "hiddenapi/annotation-flags.csv",
         metadata: "hiddenapi/metadata.csv",
         index: "hiddenapi/index.csv",
-        all_flags: "hiddenapi/all-flags.csv",
+        signature_patterns: "hiddenapi/signature-patterns.csv",
+        filtered_stub_flags: "hiddenapi/filtered-stub-flags.csv",
+        filtered_flags: "hiddenapi/filtered-flags.csv",
     },
 }
 
-module_prebuilt_bootclasspath_fragment {
+wifi_prebuilt_prebuilt_bootclasspath_fragment {
     name: "com.android.wifi-bootclasspath-fragment",
-    prefer: false,
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "wifi_module" is true.
+    prefer: true,
     soong_config_variables: {
-        module_build_from_source: {
+        source_build: {
             prefer: false,
         },
     },
@@ -46,15 +81,22 @@ module_prebuilt_bootclasspath_fragment {
     apex_available: ["com.android.wifi"],
     licenses: ["wifi-module-sdk_Android-Apache-2.0"],
     contents: ["framework-wifi"],
+    fragments: [
+        {
+            apex: "com.android.art",
+            module: "art-bootclasspath-fragment",
+        },
+    ],
     hidden_api: {
         unsupported: ["hiddenapi/hiddenapi-unsupported.txt"],
         max_target_r_low_priority: ["hiddenapi/hiddenapi-max-target-r-low-priority.txt"],
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
-        stub_flags: "hiddenapi/stub-flags.csv",
         annotation_flags: "hiddenapi/annotation-flags.csv",
         metadata: "hiddenapi/metadata.csv",
         index: "hiddenapi/index.csv",
-        all_flags: "hiddenapi/all-flags.csv",
+        signature_patterns: "hiddenapi/signature-patterns.csv",
+        filtered_stub_flags: "hiddenapi/filtered-stub-flags.csv",
+        filtered_flags: "hiddenapi/filtered-flags.csv",
     },
 }
 
@@ -99,11 +141,12 @@ java_sdk_library_import {
     },
 }
 
-module_java_sdk_library_import {
+wifi_prebuilt_java_sdk_library_import {
     name: "framework-wifi",
-    prefer: false,
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "wifi_module" is true.
+    prefer: true,
     soong_config_variables: {
-        module_build_from_source: {
+        source_build: {
             prefer: false,
         },
     },
@@ -145,6 +188,48 @@ module_java_sdk_library_import {
     },
 }
 
+java_import {
+    name: "wifi-module-sdk_service-wifi@current",
+    sdk_member_name: "service-wifi",
+    visibility: [
+        "//frameworks/opt/net/wifi/service/apex",
+        "//frameworks/opt/net/wifi/tests/wifitests/apex",
+        "//packages/modules/Wifi/apex",
+        "//packages/modules/Wifi/service",
+        "//packages/modules/Wifi/service/tests/wifitests/apex",
+    ],
+    apex_available: [
+        "com.android.wifi",
+        "test_com.android.wifi",
+    ],
+    licenses: ["wifi-module-sdk_Android-Apache-2.0@current"],
+    jars: ["java_systemserver_libs/snapshot/jars/are/invalid/service-wifi.jar"],
+}
+
+wifi_prebuilt_java_import {
+    name: "service-wifi",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "wifi_module" is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: [
+        "//frameworks/opt/net/wifi/service/apex",
+        "//frameworks/opt/net/wifi/tests/wifitests/apex",
+        "//packages/modules/Wifi/apex",
+        "//packages/modules/Wifi/service",
+        "//packages/modules/Wifi/service/tests/wifitests/apex",
+    ],
+    apex_available: [
+        "com.android.wifi",
+        "test_com.android.wifi",
+    ],
+    licenses: ["wifi-module-sdk_Android-Apache-2.0"],
+    jars: ["java_systemserver_libs/snapshot/jars/are/invalid/service-wifi.jar"],
+}
+
 license {
     name: "wifi-module-sdk_Android-Apache-2.0@current",
     sdk_member_name: "Android-Apache-2.0",
@@ -160,9 +245,35 @@ license {
     license_text: ["licenses/build/soong/licenses/LICENSE"],
 }
 
+prebuilt_systemserverclasspath_fragment {
+    name: "wifi-module-sdk_com.android.wifi-systemserverclasspath-fragment@current",
+    sdk_member_name: "com.android.wifi-systemserverclasspath-fragment",
+    visibility: ["//visibility:public"],
+    apex_available: ["com.android.wifi"],
+    licenses: ["wifi-module-sdk_Android-Apache-2.0@current"],
+    standalone_contents: ["wifi-module-sdk_service-wifi@current"],
+}
+
+wifi_prebuilt_prebuilt_systemserverclasspath_fragment {
+    name: "com.android.wifi-systemserverclasspath-fragment",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "wifi_module" is true.
+    prefer: true,
+    soong_config_variables: {
+        source_build: {
+            prefer: false,
+        },
+    },
+    visibility: ["//visibility:public"],
+    apex_available: ["com.android.wifi"],
+    licenses: ["wifi-module-sdk_Android-Apache-2.0"],
+    standalone_contents: ["service-wifi"],
+}
+
 sdk_snapshot {
     name: "wifi-module-sdk@current",
     visibility: ["//visibility:public"],
     bootclasspath_fragments: ["wifi-module-sdk_com.android.wifi-bootclasspath-fragment@current"],
     java_sdk_libs: ["wifi-module-sdk_framework-wifi@current"],
+    java_systemserver_libs: ["wifi-module-sdk_service-wifi@current"],
+    systemserverclasspath_fragments: ["wifi-module-sdk_com.android.wifi-systemserverclasspath-fragment@current"],
 }
