@@ -51,7 +51,6 @@ android/net/wifi/WifiInfo
 android/net/wifi/WifiManager
 android/net/wifi/WifiNetworkAgentSpecifier
 android/net/wifi/WifiNetworkConnectionStatistics
-android/net/wifi/WifiNetworkSelectionConfig
 android/net/wifi/WifiNetworkSpecifier
 android/net/wifi/WifiNetworkSuggestion
 android/net/wifi/WifiScanner

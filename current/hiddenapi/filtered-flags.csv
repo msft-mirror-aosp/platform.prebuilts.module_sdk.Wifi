@@ -2133,13 +2133,6 @@ Landroid/net/wifi/WifiNetworkConnectionStatistics;->numConnection:I,sdk,system-a
 Landroid/net/wifi/WifiNetworkConnectionStatistics;->numUsage:I,sdk,system-api,test-api
 Landroid/net/wifi/WifiNetworkConnectionStatistics;->toString()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/net/wifi/WifiNetworkConnectionStatistics;->writeToParcel(Landroid/os/Parcel;I)V,public-api,sdk,system-api,test-api
-Landroid/net/wifi/WifiNetworkSelectionConfig$1;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;,public-api,sdk,system-api,test-api
-Landroid/net/wifi/WifiNetworkSelectionConfig$1;->newArray(I)[Ljava/lang/Object;,public-api,sdk,system-api,test-api
-Landroid/net/wifi/WifiNetworkSelectionConfig;->describeContents()I,public-api,sdk,system-api,test-api
-Landroid/net/wifi/WifiNetworkSelectionConfig;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
-Landroid/net/wifi/WifiNetworkSelectionConfig;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
-Landroid/net/wifi/WifiNetworkSelectionConfig;->toString()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
-Landroid/net/wifi/WifiNetworkSelectionConfig;->writeToParcel(Landroid/os/Parcel;I)V,public-api,sdk,system-api,test-api
 Landroid/net/wifi/WifiNetworkSpecifier$1;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/WifiNetworkSpecifier$1;->newArray(I)[Ljava/lang/Object;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/WifiNetworkSpecifier$Builder;-><init>()V,public-api,sdk,system-api,test-api
