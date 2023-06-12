@@ -27,7 +27,6 @@ Landroid/net/wifi/ScanResult;->is80211McRTTResponder:Z,max-target-r
 Landroid/net/wifi/ScanResult;->numUsage:I,unsupported
 Landroid/net/wifi/ScanResult;->seen:J,unsupported
 Landroid/net/wifi/ScanResult;->wifiSsid:Landroid/net/wifi/WifiSsid;,unsupported
-Landroid/net/wifi/WifiConfiguration;->CREATOR:Landroid/os/Parcelable$Creator;,unsupported
 Landroid/net/wifi/WifiConfiguration;->INVALID_RSSI:I,max-target-p
 Landroid/net/wifi/WifiConfiguration;->apBand:I,unsupported
 Landroid/net/wifi/WifiConfiguration;->apChannel:I,unsupported
@@ -94,6 +93,7 @@ Landroid/net/wifi/p2p/WifiP2pDeviceList;->remove(Ljava/lang/String;)Landroid/net
 Landroid/net/wifi/p2p/WifiP2pDeviceList;->update(Landroid/net/wifi/p2p/WifiP2pDevice;)V,max-target-r
 Landroid/net/wifi/p2p/WifiP2pGroup;-><init>(Ljava/lang/String;)V,unsupported
 Landroid/net/wifi/p2p/WifiP2pGroup;->TEMPORARY_NET_ID:I,unsupported
+Landroid/net/wifi/p2p/WifiP2pGroup;->interfaceAddress:[B,unsupported
 Landroid/net/wifi/p2p/WifiP2pGroup;->isClientListEmpty()Z,unsupported
 Landroid/net/wifi/p2p/WifiP2pGroup;->setInterface(Ljava/lang/String;)V,unsupported
 Landroid/net/wifi/p2p/WifiP2pGroup;->setIsGroupOwner(Z)V,unsupported
