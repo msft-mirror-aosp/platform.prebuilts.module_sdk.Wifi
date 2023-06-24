@@ -1,7 +1,7 @@
 signature,maxTargetSdk,overrideSourcePosition,publicAlternatives,trackingBug
-|Landroid/net/wifi/IWifiManager;->getCurrentNetwork()Landroid/net/Network;|,|30|,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:255:1:255:69|,||,|170729553|
-|Landroid/net/wifi/IWifiManager;->getWifiApConfiguration()Landroid/net/wifi/WifiConfiguration;|,||,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:230:1:230:25|,||,||
-|Landroid/net/wifi/IWifiManager;->getWifiApEnabledState()I|,||,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:227:1:227:25|,||,||
+|Landroid/net/wifi/IWifiManager;->getCurrentNetwork()Landroid/net/Network;|,|30|,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:286:1:286:69|,||,|170729553|
+|Landroid/net/wifi/IWifiManager;->getWifiApConfiguration()Landroid/net/wifi/WifiConfiguration;|,||,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:249:1:249:25|,||,||
+|Landroid/net/wifi/IWifiManager;->getWifiApEnabledState()I|,||,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:246:1:246:25|,||,||
 |Landroid/net/wifi/ScanResult$InformationElement;->EID_BSS_LOAD:I|,|30|,||,||,|170729553|
 |Landroid/net/wifi/ScanResult$InformationElement;->EID_ERP:I|,|30|,||,||,|170729553|
 |Landroid/net/wifi/ScanResult$InformationElement;->EID_EXTENDED_CAPS:I|,|30|,||,||,|170729553|
@@ -28,7 +28,6 @@ signature,maxTargetSdk,overrideSourcePosition,publicAlternatives,trackingBug
 |Landroid/net/wifi/ScanResult;->numUsage:I|,||,||,||,||
 |Landroid/net/wifi/ScanResult;->seen:J|,||,||,||,||
 |Landroid/net/wifi/ScanResult;->wifiSsid:Landroid/net/wifi/WifiSsid;|,||,||,|{@link #getWifiSsid()}|,||
-|Landroid/net/wifi/WifiConfiguration;->CREATOR:Landroid/os/Parcelable$Creator;|,||,||,||,||
 |Landroid/net/wifi/WifiConfiguration;->INVALID_RSSI:I|,|28|,||,||,|115609023|
 |Landroid/net/wifi/WifiConfiguration;->apBand:I|,||,||,||,||
 |Landroid/net/wifi/WifiConfiguration;->apChannel:I|,||,||,||,||
@@ -95,6 +94,7 @@ signature,maxTargetSdk,overrideSourcePosition,publicAlternatives,trackingBug
 |Landroid/net/wifi/p2p/WifiP2pDeviceList;->update(Landroid/net/wifi/p2p/WifiP2pDevice;)V|,|30|,||,||,|170729553|
 |Landroid/net/wifi/p2p/WifiP2pGroup;-><init>(Ljava/lang/String;)V|,||,||,||,||
 |Landroid/net/wifi/p2p/WifiP2pGroup;->TEMPORARY_NET_ID:I|,||,||,||,||
+|Landroid/net/wifi/p2p/WifiP2pGroup;->interfaceAddress:[B|,||,||,||,||
 |Landroid/net/wifi/p2p/WifiP2pGroup;->isClientListEmpty()Z|,||,||,||,||
 |Landroid/net/wifi/p2p/WifiP2pGroup;->setInterface(Ljava/lang/String;)V|,||,||,||,||
 |Landroid/net/wifi/p2p/WifiP2pGroup;->setIsGroupOwner(Z)V|,||,||,||,||
