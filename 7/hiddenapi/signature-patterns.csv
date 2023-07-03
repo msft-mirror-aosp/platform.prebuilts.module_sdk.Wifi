@@ -29,9 +29,8 @@ android/net/wifi/ISubsystemRestartCallback
 android/net/wifi/ISuggestionConnectionStatusListener
 android/net/wifi/ISuggestionUserApprovalStatusListener
 android/net/wifi/ITrafficStateCallback
-android/net/wifi/IWifiBandsListener
 android/net/wifi/IWifiConnectedNetworkScorer
-android/net/wifi/IWifiLowLatencyLockListener
+android/net/wifi/IWifiDeviceLowLatencyModeListener
 android/net/wifi/IWifiManager
 android/net/wifi/IWifiNetworkSelectionConfigListener
 android/net/wifi/IWifiNetworkStateChangedListener
@@ -51,7 +50,6 @@ android/net/wifi/SupplicantState
 android/net/wifi/SynchronousExecutor
 android/net/wifi/WifiAnnotations
 android/net/wifi/WifiAvailableChannel
-android/net/wifi/WifiBands
 android/net/wifi/WifiClient
 android/net/wifi/WifiConfiguration
 android/net/wifi/WifiConnectedSessionInfo
