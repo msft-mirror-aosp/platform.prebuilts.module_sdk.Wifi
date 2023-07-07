@@ -14,10 +14,10 @@ package {
 
 prebuilt_bootclasspath_fragment {
     name: "com.android.wifi-bootclasspath-fragment",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "wifi_module" is true.
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
     use_source_config_var: {
-        config_namespace: "wifi_module",
-        var_name: "source_build",
+        config_namespace: "ANDROID",
+        var_name: "module_build_from_source",
     },
     visibility: ["//visibility:public"],
     apex_available: ["com.android.wifi"],
@@ -44,10 +44,10 @@ prebuilt_bootclasspath_fragment {
 
 prebuilt_platform_compat_config {
     name: "wifi-compat-config",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "wifi_module" is true.
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
     use_source_config_var: {
-        config_namespace: "wifi_module",
-        var_name: "source_build",
+        config_namespace: "ANDROID",
+        var_name: "module_build_from_source",
     },
     visibility: ["//visibility:public"],
     licenses: ["wifi-module-sdk_Android-Apache-2.0"],
@@ -56,10 +56,10 @@ prebuilt_platform_compat_config {
 
 java_sdk_library_import {
     name: "framework-wifi",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "wifi_module" is true.
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
     use_source_config_var: {
-        config_namespace: "wifi_module",
-        var_name: "source_build",
+        config_namespace: "ANDROID",
+        var_name: "module_build_from_source",
     },
     visibility: ["//visibility:public"],
     apex_available: [
@@ -101,10 +101,10 @@ java_sdk_library_import {
 
 java_import {
     name: "service-wifi",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "wifi_module" is true.
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
     use_source_config_var: {
-        config_namespace: "wifi_module",
-        var_name: "source_build",
+        config_namespace: "ANDROID",
+        var_name: "module_build_from_source",
     },
     visibility: [
         "//frameworks/opt/net/wifi/service/apex",
@@ -131,10 +131,10 @@ license {
 
 prebuilt_systemserverclasspath_fragment {
     name: "com.android.wifi-systemserverclasspath-fragment",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "wifi_module" is true.
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
     use_source_config_var: {
-        config_namespace: "wifi_module",
-        var_name: "source_build",
+        config_namespace: "ANDROID",
+        var_name: "module_build_from_source",
     },
     visibility: ["//visibility:public"],
     apex_available: ["com.android.wifi"],
