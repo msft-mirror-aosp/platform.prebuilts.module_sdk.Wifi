@@ -245,7 +245,6 @@ Landroid/net/wifi/IWifiLowLatencyLockListener$Stub;->onTransact(ILandroid/os/Par
 Landroid/net/wifi/IWifiManager$Default;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/IWifiManager$Stub$Proxy;-><init>(Landroid/os/IBinder;)V,unsupported
 Landroid/net/wifi/IWifiManager$Stub$Proxy;->acquireMulticastLock(Landroid/os/IBinder;Ljava/lang/String;)V,lo-prio,max-target-o
-Landroid/net/wifi/IWifiManager$Stub$Proxy;->acquireWifiLock(Landroid/os/IBinder;ILjava/lang/String;Landroid/os/WorkSource;)Z,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager$Stub$Proxy;->addOrUpdatePasspointConfiguration(Landroid/net/wifi/hotspot2/PasspointConfiguration;Ljava/lang/String;)Z,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager$Stub$Proxy;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/IWifiManager$Stub$Proxy;->disableEphemeralNetwork(Ljava/lang/String;Ljava/lang/String;)V,lo-prio,max-target-o
@@ -281,7 +280,6 @@ Landroid/net/wifi/IWifiManager$Stub$Proxy;->stopLocalOnlyHotspot()V,lo-prio,max-
 Landroid/net/wifi/IWifiManager$Stub$Proxy;->stopSoftAp()Z,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager$Stub$Proxy;->stopWatchLocalOnlyHotspot()V,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager$Stub$Proxy;->updateInterfaceIpState(Ljava/lang/String;I)V,lo-prio,max-target-o
-Landroid/net/wifi/IWifiManager$Stub$Proxy;->updateWifiLockWorkSource(Landroid/os/IBinder;Landroid/os/WorkSource;)V,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager$Stub;->DESCRIPTOR:Ljava/lang/String;,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager$Stub;->TRANSACTION_acquireMulticastLock:I,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager$Stub;->TRANSACTION_acquireWifiLock:I,lo-prio,max-target-o
@@ -342,7 +340,6 @@ Landroid/net/wifi/IWifiManager$Stub;->asBinder()Landroid/os/IBinder;,public-api,
 Landroid/net/wifi/IWifiManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/wifi/IWifiManager;,unsupported
 Landroid/net/wifi/IWifiManager$Stub;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z,public-api,sdk,system-api,test-api
 Landroid/net/wifi/IWifiManager;->acquireMulticastLock(Landroid/os/IBinder;Ljava/lang/String;)V,lo-prio,max-target-o
-Landroid/net/wifi/IWifiManager;->acquireWifiLock(Landroid/os/IBinder;ILjava/lang/String;Landroid/os/WorkSource;)Z,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager;->addOrUpdatePasspointConfiguration(Landroid/net/wifi/hotspot2/PasspointConfiguration;Ljava/lang/String;)Z,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager;->disableEphemeralNetwork(Ljava/lang/String;Ljava/lang/String;)V,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager;->disableNetwork(ILjava/lang/String;)Z,lo-prio,max-target-o
@@ -375,7 +372,6 @@ Landroid/net/wifi/IWifiManager;->stopLocalOnlyHotspot()V,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager;->stopSoftAp()Z,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager;->stopWatchLocalOnlyHotspot()V,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager;->updateInterfaceIpState(Ljava/lang/String;I)V,lo-prio,max-target-o
-Landroid/net/wifi/IWifiManager;->updateWifiLockWorkSource(Landroid/os/IBinder;Landroid/os/WorkSource;)V,lo-prio,max-target-o
 Landroid/net/wifi/IWifiNetworkSelectionConfigListener$Default;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/IWifiNetworkSelectionConfigListener$Stub$Proxy;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/IWifiNetworkSelectionConfigListener$Stub;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
