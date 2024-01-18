@@ -39,6 +39,7 @@ android/net/wifi/IWifiScanner
 android/net/wifi/IWifiScannerListener
 android/net/wifi/IWifiVerboseLoggingStatusChangedListener
 android/net/wifi/MloLink
+android/net/wifi/OuiKeyedData
 android/net/wifi/ParcelUtil
 android/net/wifi/QosPolicyParams
 android/net/wifi/RttManager
