@@ -373,6 +373,7 @@ package android.net.wifi {
     method @NonNull public java.util.List<android.net.wifi.MloLink> getAffiliatedMloLinks();
     method @Nullable public android.net.MacAddress getApMldMacAddress();
     method @IntRange(from=android.net.wifi.MloLink.INVALID_MLO_LINK_ID, to=0xf) public int getApMloLinkId();
+    method public long getApplicableRedactions();
     method @NonNull public java.util.List<android.net.wifi.MloLink> getAssociatedMloLinks();
     method public String getBSSID();
     method public int getCurrentSecurityType();
@@ -1625,6 +1626,8 @@ package android.net.wifi.rtt {
     method public int describeContents();
     method public int getDistanceMm();
     method public int getDistanceStdDevMm();
+    method @NonNull public byte[] getLci();
+    method @NonNull public byte[] getLcr();
     method @Nullable public android.net.MacAddress getMacAddress();
     method public int getMeasurementBandwidth();
     method public int getMeasurementChannelFrequencyMHz();
