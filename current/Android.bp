@@ -12,6 +12,14 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
+apex_contributions_defaults {
+    name: "wifi-module-sdk.contributions",
+    contents: [
+        "prebuilt_wifi-compat-config",
+        "prebuilt_framework-wifi",
+    ],
+}
+
 prebuilt_bootclasspath_fragment {
     name: "com.android.wifi-bootclasspath-fragment",
     // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "wifi_module" is true.
