@@ -5405,3 +5405,4 @@ Lcom/android/wifi/x/com/android/wifi/flags/CustomFeatureFlags$$ExternalSynthetic
 Lcom/android/wifi/x/com/android/wifi/flags/CustomFeatureFlags$$ExternalSyntheticLambda6;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/wifi/x/com/android/wifi/flags/CustomFeatureFlags$$ExternalSyntheticLambda7;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/wifi/x/com/android/wifi/flags/CustomFeatureFlags$$ExternalSyntheticLambda8;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/wifi/x/com/android/wifi/flags/CustomFeatureFlags$$ExternalSyntheticLambda9;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
