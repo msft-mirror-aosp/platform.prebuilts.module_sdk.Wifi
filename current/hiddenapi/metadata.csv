@@ -1,7 +1,7 @@
 signature,maxTargetSdk,overrideSourcePosition,publicAlternatives,trackingBug
-|Landroid/net/wifi/IWifiManager;->getCurrentNetwork()Landroid/net/Network;|,|30|,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:248:1:248:69|,||,|170729553|
-|Landroid/net/wifi/IWifiManager;->getWifiApConfiguration()Landroid/net/wifi/WifiConfiguration;|,||,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:223:1:223:25|,||,||
-|Landroid/net/wifi/IWifiManager;->getWifiApEnabledState()I|,||,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:220:1:220:25|,||,||
+|Landroid/net/wifi/IWifiManager;->getCurrentNetwork()Landroid/net/Network;|,|30|,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:255:1:255:69|,||,|170729553|
+|Landroid/net/wifi/IWifiManager;->getWifiApConfiguration()Landroid/net/wifi/WifiConfiguration;|,||,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:230:1:230:25|,||,||
+|Landroid/net/wifi/IWifiManager;->getWifiApEnabledState()I|,||,|packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl:227:1:227:25|,||,||
 |Landroid/net/wifi/ScanResult$InformationElement;->EID_BSS_LOAD:I|,|30|,||,||,|170729553|
 |Landroid/net/wifi/ScanResult$InformationElement;->EID_ERP:I|,|30|,||,||,|170729553|
 |Landroid/net/wifi/ScanResult$InformationElement;->EID_EXTENDED_CAPS:I|,|30|,||,||,|170729553|
