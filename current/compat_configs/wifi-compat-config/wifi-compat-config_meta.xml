@@ -7,6 +7,6 @@
     <meta-data definedIn="android.net.wifi.SoftApConfiguration" sourcePosition="packages/modules/Wifi/framework/java/android/net/wifi/SoftApConfiguration.java:169" />
   </compat-change>
   <compat-change description="Local networks should not be modified by B&amp;R since the user may have updated it with the latest configurations." enableAfterTargetSdk="32" id="234793325" name="NOT_OVERRIDE_EXISTING_NETWORKS_ON_RESTORE">
-    <meta-data definedIn="android.net.wifi.WifiManager" sourcePosition="packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java:157" />
+    <meta-data definedIn="android.net.wifi.WifiManager" sourcePosition="packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java:158" />
   </compat-change>
 </config>
