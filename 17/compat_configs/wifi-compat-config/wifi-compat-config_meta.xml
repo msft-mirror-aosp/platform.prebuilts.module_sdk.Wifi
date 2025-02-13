@@ -7,6 +7,6 @@
     <meta-data definedIn="android.net.wifi.SoftApConfiguration" sourcePosition="packages/modules/Wifi/framework/java/android/net/wifi/SoftApConfiguration.java:167" />
   </compat-change>
   <compat-change enableAfterTargetSdk="32" id="234793325" name="NOT_OVERRIDE_EXISTING_NETWORKS_ON_RESTORE">
-    <meta-data definedIn="android.net.wifi.WifiManager" sourcePosition="packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java:161" />
+    <meta-data definedIn="android.net.wifi.WifiManager" sourcePosition="packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java:162" />
   </compat-change>
 </config>
