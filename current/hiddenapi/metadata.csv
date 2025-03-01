@@ -79,6 +79,8 @@ signature,maxTargetSdk,overrideSourcePosition,publicAlternatives,trackingBug
 |Landroid/net/wifi/WifiManager;->initializeMulticastFiltering()Z|,||,||,||,||
 |Landroid/net/wifi/WifiManager;->mActiveLockCount:I|,||,||,||,||
 |Landroid/net/wifi/WifiManager;->mService:Landroid/net/wifi/IWifiManager;|,||,||,||,||
+|Landroid/net/wifi/WifiNetworkSpecifier$Builder;->setPreferSecondarySta(Z)Landroid/net/wifi/WifiNetworkSpecifier$Builder;|,||,||,||,||
+|Landroid/net/wifi/WifiNetworkSpecifier;->isPreferSecondarySta()Z|,||,||,||,||
 |Landroid/net/wifi/WifiSsid;->NONE:Ljava/lang/String;|,||,||,|{@link android.net.wifi.WifiManager#UNKNOWN_SSID}|,||
 |Landroid/net/wifi/WifiSsid;->createFromAsciiEncoded(Ljava/lang/String;)Landroid/net/wifi/WifiSsid;|,||,||,|{@link #fromBytes(byte[])}|,||
 |Landroid/net/wifi/WifiSsid;->getOctets()[B|,||,||,|{@link #getBytes()}|,||
@@ -110,7 +112,7 @@ signature,maxTargetSdk,overrideSourcePosition,publicAlternatives,trackingBug
 |Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;-><init>()V|,||,||,||,||
 |Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->device:Landroid/net/wifi/p2p/WifiP2pDevice;|,||,||,||,||
 |Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->event:I|,||,||,||,||
-|Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->pairingPinOrPassphrase:Ljava/lang/String;|,||,||,||,||
+|Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->isComeback:Z|,||,||,||,||
 |Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->wpsPin:Ljava/lang/String;|,||,||,||,||
 |Landroid/net/wifi/p2p/WifiP2pWfdInfo;-><init>(III)V|,||,||,||,||
 |Landroid/net/wifi/p2p/nsd/WifiP2pDnsSdServiceInfo;->createRequest(Ljava/lang/String;II)Ljava/lang/String;|,|28|,||,||,|115609023|
