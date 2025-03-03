@@ -1,7 +1,8 @@
 android/net/wifi/AnqpInformationElement
-android/net/wifi/BaseWifiService
 android/net/wifi/BatchedScanResult
+android/net/wifi/BlockingOption
 android/net/wifi/CoexUnsafeChannel
+android/net/wifi/DeauthenticationReasonCode
 android/net/wifi/EAPConstants
 android/net/wifi/EasyConnectStatusCallback
 android/net/wifi/IActionListener
@@ -44,6 +45,7 @@ android/net/wifi/IWifiNetworkSelectionConfigListener
 android/net/wifi/IWifiNetworkStateChangedListener
 android/net/wifi/IWifiScanner
 android/net/wifi/IWifiScannerListener
+android/net/wifi/IWifiStateChangedListener
 android/net/wifi/IWifiVerboseLoggingStatusChangedListener
 android/net/wifi/MloLink
 android/net/wifi/MscsParams
@@ -89,5 +91,6 @@ android/net/wifi/hotspot2/**
 android/net/wifi/p2p/**
 android/net/wifi/rtt/**
 android/net/wifi/twt/**
+android/net/wifi/usd/**
 android/net/wifi/util/**
 com/android/wifi/**
