@@ -1,7 +1,7 @@
 signature,file,startline,startcol,endline,endcol,properties
-Landroid/net/wifi/IWifiManager;->getWifiApEnabledState()I,packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl,271,1,271,25,
-Landroid/net/wifi/IWifiManager;->getWifiApConfiguration()Landroid/net/wifi/WifiConfiguration;,packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl,273,1,273,25,
-Landroid/net/wifi/IWifiManager;->getCurrentNetwork()Landroid/net/Network;,packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl,309,1,309,65,maxTargetSdk=30&trackingBug=170729553L
+Landroid/net/wifi/IWifiManager;->getWifiApEnabledState()I,packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl,272,1,272,25,
+Landroid/net/wifi/IWifiManager;->getWifiApConfiguration()Landroid/net/wifi/WifiConfiguration;,packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl,274,1,274,25,
+Landroid/net/wifi/IWifiManager;->getCurrentNetwork()Landroid/net/Network;,packages/modules/Wifi/framework/java/android/net/wifi/IWifiManager.aidl,310,1,310,65,maxTargetSdk=30&trackingBug=170729553L
 Landroid/net/wifi/ScanResult$InformationElement;->EID_SSID:I,packages/modules/Wifi/framework/java/android/net/wifi/ScanResult.java,1262,9,1262,92,maxTargetSdk=30&trackingBug=170729553L
 Landroid/net/wifi/ScanResult$InformationElement;->EID_SUPPORTED_RATES:I,packages/modules/Wifi/framework/java/android/net/wifi/ScanResult.java,1265,9,1265,92,maxTargetSdk=30&trackingBug=170729553L
 Landroid/net/wifi/ScanResult$InformationElement;->EID_TIM:I,packages/modules/Wifi/framework/java/android/net/wifi/ScanResult.java,1268,9,1268,92,maxTargetSdk=30&trackingBug=170729553L
@@ -77,8 +77,8 @@ Landroid/net/wifi/WifiManager;->WIFI_FREQUENCY_BAND_2GHZ:I,packages/modules/Wifi
 Landroid/net/wifi/WifiManager;->mActiveLockCount:I,packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java,2086,5,2086,25,
 Landroid/net/wifi/WifiManager;->mService:Landroid/net/wifi/IWifiManager;,packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java,2090,5,2090,25,
 Landroid/net/wifi/WifiManager;->cancelLocalOnlyHotspotRequest()V,packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java,6117,5,6117,25,
-Landroid/net/wifi/WifiManager;->initializeMulticastFiltering()Z,packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java,8600,5,8600,25,
-Landroid/net/wifi/WifiManager;->enableVerboseLogging(I)V,packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java,8646,5,8649,6,maxTargetSdk=29&publicAlternatives=%22Use+%7B%40code+%23setVerboseLoggingEnabled%28boolean%29%7D+instead.%22
+Landroid/net/wifi/WifiManager;->initializeMulticastFiltering()Z,packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java,8601,5,8601,25,
+Landroid/net/wifi/WifiManager;->enableVerboseLogging(I)V,packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java,8647,5,8650,6,maxTargetSdk=29&publicAlternatives=%22Use+%7B%40code+%23setVerboseLoggingEnabled%28boolean%29%7D+instead.%22
 Landroid/net/wifi/WifiNetworkSpecifier$Builder;->setPreferSecondarySta(Z)Landroid/net/wifi/WifiNetworkSpecifier$Builder;,packages/modules/Wifi/framework/java/android/net/wifi/WifiNetworkSpecifier.java,494,18,494,38,
 Landroid/net/wifi/WifiNetworkSpecifier;->isPreferSecondarySta()Z,packages/modules/Wifi/framework/java/android/net/wifi/WifiNetworkSpecifier.java,783,5,783,25,
 Landroid/net/wifi/WifiSsid;->octets:Ljava/io/ByteArrayOutputStream;,packages/modules/Wifi/framework/java/android/net/wifi/WifiSsid.java,206,5,206,69,publicAlternatives=%22%7B%40link+%23getBytes%28%29%7D%22
