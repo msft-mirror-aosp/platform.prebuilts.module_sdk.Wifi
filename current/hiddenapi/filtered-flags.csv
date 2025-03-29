@@ -345,7 +345,6 @@ Landroid/net/wifi/IWifiLowLatencyLockListener$Stub;->asBinder()Landroid/os/IBind
 Landroid/net/wifi/IWifiLowLatencyLockListener$Stub;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z,public-api,sdk,system-api,test-api
 Landroid/net/wifi/IWifiManager$Default;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/IWifiManager$Stub$Proxy;-><init>(Landroid/os/IBinder;)V,unsupported
-Landroid/net/wifi/IWifiManager$Stub$Proxy;->acquireMulticastLock(Landroid/os/IBinder;Ljava/lang/String;)V,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager$Stub$Proxy;->addOrUpdatePasspointConfiguration(Landroid/net/wifi/hotspot2/PasspointConfiguration;Ljava/lang/String;)Z,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager$Stub$Proxy;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/IWifiManager$Stub$Proxy;->disableEphemeralNetwork(Ljava/lang/String;Ljava/lang/String;)V,lo-prio,max-target-o
@@ -439,7 +438,6 @@ Landroid/net/wifi/IWifiManager$Stub;->TRANSACTION_updateWifiLockWorkSource:I,lo-
 Landroid/net/wifi/IWifiManager$Stub;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
 Landroid/net/wifi/IWifiManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/wifi/IWifiManager;,unsupported
 Landroid/net/wifi/IWifiManager$Stub;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z,public-api,sdk,system-api,test-api
-Landroid/net/wifi/IWifiManager;->acquireMulticastLock(Landroid/os/IBinder;Ljava/lang/String;)V,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager;->addOrUpdatePasspointConfiguration(Landroid/net/wifi/hotspot2/PasspointConfiguration;Ljava/lang/String;)Z,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager;->disableEphemeralNetwork(Ljava/lang/String;Ljava/lang/String;)V,lo-prio,max-target-o
 Landroid/net/wifi/IWifiManager;->disableNetwork(ILjava/lang/String;)Z,lo-prio,max-target-o
@@ -2901,8 +2899,8 @@ Landroid/net/wifi/WifiScanner$ServiceListener$$ExternalSyntheticLambda1;->run()V
 Landroid/net/wifi/WifiScanner$ServiceListener$$ExternalSyntheticLambda2;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/net/wifi/WifiScanner$ServiceListener$$ExternalSyntheticLambda3;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/net/wifi/WifiScanner$ServiceListener$$ExternalSyntheticLambda4;->run()V,core-platform-api,public-api,sdk,system-api,test-api
-Landroid/net/wifi/WifiScanner$ServiceListener$$ExternalSyntheticLambda5;->accept(Ljava/lang/Object;)V,core-platform-api,public-api,sdk,system-api,test-api
-Landroid/net/wifi/WifiScanner$ServiceListener$$ExternalSyntheticLambda6;->run()V,core-platform-api,public-api,sdk,system-api,test-api
+Landroid/net/wifi/WifiScanner$ServiceListener$$ExternalSyntheticLambda5;->run()V,core-platform-api,public-api,sdk,system-api,test-api
+Landroid/net/wifi/WifiScanner$ServiceListener$$ExternalSyntheticLambda6;->accept(Ljava/lang/Object;)V,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/net/wifi/WifiScanner$WifiChangeListener;->onChanging([Landroid/net/wifi/ScanResult;)V,sdk,system-api,test-api
 Landroid/net/wifi/WifiScanner$WifiChangeListener;->onQuiescence([Landroid/net/wifi/ScanResult;)V,sdk,system-api,test-api
 Landroid/net/wifi/WifiScanner$WifiChangeSettings$1;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;,public-api,sdk,system-api,test-api
