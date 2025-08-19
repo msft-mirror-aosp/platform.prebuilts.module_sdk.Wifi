@@ -24,6 +24,8 @@ android/net/wifi/IOnWifiActivityEnergyInfoListener
 android/net/wifi/IOnWifiDriverCountryCodeChangedListener
 android/net/wifi/IOnWifiUsabilityStatsListener
 android/net/wifi/IPnoScanResultsCallback
+android/net/wifi/IPrivilegedConfiguredNetworksListener
+android/net/wifi/IRestrictAutoJoinToSubIdCallback
 android/net/wifi/IScanDataListener
 android/net/wifi/IScanResultsCallback
 android/net/wifi/IScanResultsListener

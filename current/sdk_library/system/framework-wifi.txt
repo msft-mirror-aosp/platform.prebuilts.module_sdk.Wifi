@@ -497,6 +497,7 @@ package android.net.wifi {
     method @NonNull public java.util.List<android.net.wifi.OuiKeyedData> getVendorData();
     method @NonNull public java.util.List<android.net.wifi.ScanResult.InformationElement> getVendorElements();
     method public boolean isAutoShutdownEnabled();
+    method public boolean isBandOptimizationEnabled();
     method public boolean isBridgedModeOpportunisticShutdownEnabled();
     method public boolean isClientControlByUserEnabled();
     method public boolean isClientIsolationEnabled();
@@ -517,11 +518,11 @@ package android.net.wifi {
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setAllowedClientList(@NonNull java.util.List<android.net.MacAddress>);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setAutoShutdownEnabled(boolean);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setBand(int);
+    method @NonNull public android.net.wifi.SoftApConfiguration.Builder setBandOptimizationEnabled(boolean);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setBands(@NonNull int[]);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setBlockedClientList(@NonNull java.util.List<android.net.MacAddress>);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setBridgedModeOpportunisticShutdownEnabled(boolean);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setBridgedModeOpportunisticShutdownTimeoutMillis(@IntRange(from=0xffffffff) long);
-    method @NonNull public android.net.wifi.SoftApConfiguration.Builder setBssid(@Nullable android.net.MacAddress);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setChannel(int, int);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setClientControlByUserEnabled(boolean);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setClientIsolationEnabled(boolean);
@@ -531,12 +532,10 @@ package android.net.wifi {
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setMacRandomizationSetting(int);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setMaxChannelBandwidth(int);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setMaxNumberOfClients(@IntRange(from=0) int);
-    method @NonNull public android.net.wifi.SoftApConfiguration.Builder setPassphrase(@Nullable String, int);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setShutdownTimeoutMillis(@IntRange(from=0xffffffff) long);
     method @Deprecated @NonNull public android.net.wifi.SoftApConfiguration.Builder setSsid(@Nullable String);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setVendorData(@NonNull java.util.List<android.net.wifi.OuiKeyedData>);
     method @NonNull public android.net.wifi.SoftApConfiguration.Builder setVendorElements(@NonNull java.util.List<android.net.wifi.ScanResult.InformationElement>);
-    method @NonNull public android.net.wifi.SoftApConfiguration.Builder setWifiSsid(@Nullable android.net.wifi.WifiSsid);
   }
 
   public final class SoftApInfo implements android.os.Parcelable {
@@ -596,110 +595,110 @@ package android.net.wifi {
     field @NonNull public static final android.os.Parcelable.Creator<android.net.wifi.WifiClient> CREATOR;
   }
 
-  @Deprecated public class WifiConfiguration implements android.os.Parcelable {
-    method @Deprecated @NonNull public java.util.Set<java.lang.String> getAllNetworkKeys();
-    method @Deprecated public int getAuthType();
-    method @Deprecated @Nullable public java.util.List<android.net.MacAddress> getBssidAllowlist();
-    method @Deprecated public int getDeletionPriority();
-    method @Deprecated @NonNull public byte[] getDppCSignKey();
-    method @Deprecated @NonNull public byte[] getDppConnector();
-    method @Deprecated @NonNull public byte[] getDppNetAccessKey();
-    method @Deprecated @NonNull public byte[] getDppPrivateEcKey();
-    method @Deprecated @NonNull public android.net.IpConfiguration getIpConfiguration();
-    method @Deprecated @NonNull public android.net.wifi.WifiConfiguration.NetworkSelectionStatus getNetworkSelectionStatus();
-    method @Deprecated @NonNull public String getPrintableSsid();
-    method @Deprecated @NonNull public String getProfileKey();
-    method @Deprecated public int getRecentFailureReason();
-    method @Deprecated @NonNull public java.util.List<android.net.wifi.OuiKeyedData> getVendorData();
-    method @Deprecated public boolean hasNoInternetAccess();
-    method @Deprecated public boolean isEphemeral();
-    method @Deprecated public static boolean isMetered(@Nullable android.net.wifi.WifiConfiguration, @Nullable android.net.wifi.WifiInfo);
-    method @Deprecated public boolean isNoInternetAccessExpected();
-    method @Deprecated public boolean isRepeaterEnabled();
-    method @Deprecated public boolean isSendDhcpHostnameEnabled();
-    method @Deprecated public boolean isWifi7Enabled();
-    method @Deprecated public void setBssidAllowlist(@Nullable java.util.List<android.net.MacAddress>);
-    method @Deprecated public void setDeletionPriority(int) throws java.lang.IllegalArgumentException;
-    method @Deprecated public void setNetworkSelectionStatus(@NonNull android.net.wifi.WifiConfiguration.NetworkSelectionStatus);
-    method @Deprecated @RequiresPermission(android.Manifest.permission.NETWORK_SETTINGS) public void setRepeaterEnabled(boolean);
-    method @Deprecated @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.NETWORK_SETUP_WIZARD}) public void setSendDhcpHostnameEnabled(boolean);
-    method @Deprecated public void setVendorData(@NonNull java.util.List<android.net.wifi.OuiKeyedData>);
-    method @Deprecated public void setWifi7Enabled(boolean);
-    field @Deprecated @NonNull public static final android.os.Parcelable.Creator<android.net.wifi.WifiConfiguration> CREATOR;
-    field @Deprecated public static final int INVALID_NETWORK_ID = -1; // 0xffffffff
-    field @Deprecated public static final int METERED_OVERRIDE_METERED = 1; // 0x1
-    field @Deprecated public static final int METERED_OVERRIDE_NONE = 0; // 0x0
-    field @Deprecated public static final int METERED_OVERRIDE_NOT_METERED = 2; // 0x2
-    field @Deprecated public static final int RECENT_FAILURE_AP_UNABLE_TO_HANDLE_NEW_STA = 17; // 0x11
-    field @Deprecated public static final int RECENT_FAILURE_DISCONNECTION_AP_BUSY = 1004; // 0x3ec
-    field @Deprecated public static final int RECENT_FAILURE_MBO_ASSOC_DISALLOWED_AIR_INTERFACE_OVERLOADED = 1007; // 0x3ef
-    field @Deprecated public static final int RECENT_FAILURE_MBO_ASSOC_DISALLOWED_AUTH_SERVER_OVERLOADED = 1008; // 0x3f0
-    field @Deprecated public static final int RECENT_FAILURE_MBO_ASSOC_DISALLOWED_INSUFFICIENT_RSSI = 1009; // 0x3f1
-    field @Deprecated public static final int RECENT_FAILURE_MBO_ASSOC_DISALLOWED_MAX_NUM_STA_ASSOCIATED = 1006; // 0x3ee
-    field @Deprecated public static final int RECENT_FAILURE_MBO_ASSOC_DISALLOWED_UNSPECIFIED = 1005; // 0x3ed
-    field @Deprecated public static final int RECENT_FAILURE_NETWORK_NOT_FOUND = 1011; // 0x3f3
-    field @Deprecated public static final int RECENT_FAILURE_NONE = 0; // 0x0
-    field @Deprecated public static final int RECENT_FAILURE_OCE_RSSI_BASED_ASSOCIATION_REJECTION = 1010; // 0x3f2
-    field @Deprecated public static final int RECENT_FAILURE_POOR_CHANNEL_CONDITIONS = 1003; // 0x3eb
-    field @Deprecated public static final int RECENT_FAILURE_REFUSED_TEMPORARILY = 1002; // 0x3ea
-    field @Deprecated public boolean allowAutojoin;
-    field @Deprecated public int carrierId;
-    field @Deprecated public boolean carrierMerged;
-    field @Deprecated public String creatorName;
-    field @Deprecated public int creatorUid;
-    field @Deprecated public boolean fromWifiNetworkSpecifier;
-    field @Deprecated public boolean fromWifiNetworkSuggestion;
-    field @Deprecated public int lastConnectUid;
-    field @Deprecated public long lastConnected;
-    field @Deprecated public String lastUpdateName;
-    field @Deprecated public int lastUpdateUid;
-    field @Deprecated public int macRandomizationSetting;
-    field @Deprecated public boolean meteredHint;
-    field @Deprecated public int meteredOverride;
-    field @Deprecated public int numAssociation;
-    field @Deprecated public int numRebootsSinceLastUse;
-    field @Deprecated public int numScorerOverride;
-    field @Deprecated public int numScorerOverrideAndSwitchedNetwork;
-    field @Deprecated public boolean requirePmf;
-    field @Deprecated public boolean shared;
-    field @Deprecated public int subscriptionId;
-    field @Deprecated public boolean useExternalScores;
+  public class WifiConfiguration implements android.os.Parcelable {
+    method @NonNull public java.util.Set<java.lang.String> getAllNetworkKeys();
+    method public int getAuthType();
+    method @Nullable public java.util.List<android.net.MacAddress> getBssidAllowlist();
+    method public int getDeletionPriority();
+    method @NonNull public byte[] getDppCSignKey();
+    method @NonNull public byte[] getDppConnector();
+    method @NonNull public byte[] getDppNetAccessKey();
+    method @NonNull public byte[] getDppPrivateEcKey();
+    method @NonNull public android.net.IpConfiguration getIpConfiguration();
+    method @NonNull public android.net.wifi.WifiConfiguration.NetworkSelectionStatus getNetworkSelectionStatus();
+    method @NonNull public String getPrintableSsid();
+    method @NonNull public String getProfileKey();
+    method public int getRecentFailureReason();
+    method @NonNull public java.util.List<android.net.wifi.OuiKeyedData> getVendorData();
+    method public boolean hasNoInternetAccess();
+    method public boolean isEphemeral();
+    method public static boolean isMetered(@Nullable android.net.wifi.WifiConfiguration, @Nullable android.net.wifi.WifiInfo);
+    method public boolean isNoInternetAccessExpected();
+    method public boolean isRepeaterEnabled();
+    method public boolean isSendDhcpHostnameEnabled();
+    method public boolean isWifi7Enabled();
+    method public void setBssidAllowlist(@Nullable java.util.List<android.net.MacAddress>);
+    method public void setDeletionPriority(int) throws java.lang.IllegalArgumentException;
+    method public void setNetworkSelectionStatus(@NonNull android.net.wifi.WifiConfiguration.NetworkSelectionStatus);
+    method @RequiresPermission(android.Manifest.permission.NETWORK_SETTINGS) public void setRepeaterEnabled(boolean);
+    method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.NETWORK_SETUP_WIZARD}) public void setSendDhcpHostnameEnabled(boolean);
+    method public void setVendorData(@NonNull java.util.List<android.net.wifi.OuiKeyedData>);
+    method public void setWifi7Enabled(boolean);
+    field @NonNull public static final android.os.Parcelable.Creator<android.net.wifi.WifiConfiguration> CREATOR;
+    field public static final int INVALID_NETWORK_ID = -1; // 0xffffffff
+    field public static final int METERED_OVERRIDE_METERED = 1; // 0x1
+    field public static final int METERED_OVERRIDE_NONE = 0; // 0x0
+    field public static final int METERED_OVERRIDE_NOT_METERED = 2; // 0x2
+    field public static final int RECENT_FAILURE_AP_UNABLE_TO_HANDLE_NEW_STA = 17; // 0x11
+    field public static final int RECENT_FAILURE_DISCONNECTION_AP_BUSY = 1004; // 0x3ec
+    field public static final int RECENT_FAILURE_MBO_ASSOC_DISALLOWED_AIR_INTERFACE_OVERLOADED = 1007; // 0x3ef
+    field public static final int RECENT_FAILURE_MBO_ASSOC_DISALLOWED_AUTH_SERVER_OVERLOADED = 1008; // 0x3f0
+    field public static final int RECENT_FAILURE_MBO_ASSOC_DISALLOWED_INSUFFICIENT_RSSI = 1009; // 0x3f1
+    field public static final int RECENT_FAILURE_MBO_ASSOC_DISALLOWED_MAX_NUM_STA_ASSOCIATED = 1006; // 0x3ee
+    field public static final int RECENT_FAILURE_MBO_ASSOC_DISALLOWED_UNSPECIFIED = 1005; // 0x3ed
+    field public static final int RECENT_FAILURE_NETWORK_NOT_FOUND = 1011; // 0x3f3
+    field public static final int RECENT_FAILURE_NONE = 0; // 0x0
+    field public static final int RECENT_FAILURE_OCE_RSSI_BASED_ASSOCIATION_REJECTION = 1010; // 0x3f2
+    field public static final int RECENT_FAILURE_POOR_CHANNEL_CONDITIONS = 1003; // 0x3eb
+    field public static final int RECENT_FAILURE_REFUSED_TEMPORARILY = 1002; // 0x3ea
+    field public boolean allowAutojoin;
+    field public int carrierId;
+    field public boolean carrierMerged;
+    field public String creatorName;
+    field public int creatorUid;
+    field public boolean fromWifiNetworkSpecifier;
+    field public boolean fromWifiNetworkSuggestion;
+    field public int lastConnectUid;
+    field public long lastConnected;
+    field public String lastUpdateName;
+    field public int lastUpdateUid;
+    field public int macRandomizationSetting;
+    field public boolean meteredHint;
+    field public int meteredOverride;
+    field public int numAssociation;
+    field public int numRebootsSinceLastUse;
+    field public int numScorerOverride;
+    field public int numScorerOverrideAndSwitchedNetwork;
+    field public boolean requirePmf;
+    field public boolean shared;
+    field public int subscriptionId;
+    field public boolean useExternalScores;
   }
 
-  @Deprecated public static class WifiConfiguration.NetworkSelectionStatus {
-    method @Deprecated public int getDisableReasonCounter(int);
-    method @Deprecated public long getDisableTime();
-    method @Deprecated public static int getMaxNetworkSelectionDisableReason();
-    method @Deprecated public int getNetworkSelectionDisableReason();
-    method @Deprecated @Nullable public static String getNetworkSelectionDisableReasonString(int);
-    method @Deprecated public int getNetworkSelectionStatus();
-    method @Deprecated @NonNull public String getNetworkStatusString();
-    method @Deprecated public boolean hasEverConnected();
-    field @Deprecated public static final int DISABLED_ASSOCIATION_REJECTION = 1; // 0x1
-    field @Deprecated public static final int DISABLED_AUTHENTICATION_FAILURE = 2; // 0x2
-    field @Deprecated public static final int DISABLED_AUTHENTICATION_NO_CREDENTIALS = 5; // 0x5
-    field @Deprecated public static final int DISABLED_AUTHENTICATION_NO_SUBSCRIPTION = 9; // 0x9
-    field @Deprecated public static final int DISABLED_AUTHENTICATION_PRIVATE_EAP_ERROR = 10; // 0xa
-    field @Deprecated public static final int DISABLED_BY_WIFI_MANAGER = 7; // 0x7
-    field @Deprecated public static final int DISABLED_BY_WRONG_PASSWORD = 8; // 0x8
-    field @Deprecated public static final int DISABLED_CONSECUTIVE_FAILURES = 12; // 0xc
-    field @Deprecated public static final int DISABLED_DHCP_FAILURE = 3; // 0x3
-    field @Deprecated public static final int DISABLED_NETWORK_NOT_FOUND = 11; // 0xb
-    field @Deprecated public static final int DISABLED_NONE = 0; // 0x0
-    field @Deprecated public static final int DISABLED_NO_INTERNET_PERMANENT = 6; // 0x6
-    field @Deprecated public static final int DISABLED_NO_INTERNET_TEMPORARY = 4; // 0x4
-    field @Deprecated public static final int DISABLED_TRANSITION_DISABLE_INDICATION = 13; // 0xd
-    field @Deprecated public static final int DISABLED_UNWANTED_LOW_RSSI = 14; // 0xe
-    field @Deprecated public static final int NETWORK_SELECTION_ENABLED = 0; // 0x0
-    field @Deprecated public static final int NETWORK_SELECTION_PERMANENTLY_DISABLED = 2; // 0x2
-    field @Deprecated public static final int NETWORK_SELECTION_TEMPORARY_DISABLED = 1; // 0x1
+  public static class WifiConfiguration.NetworkSelectionStatus {
+    method public int getDisableReasonCounter(int);
+    method public long getDisableTime();
+    method public static int getMaxNetworkSelectionDisableReason();
+    method public int getNetworkSelectionDisableReason();
+    method @Nullable public static String getNetworkSelectionDisableReasonString(int);
+    method public int getNetworkSelectionStatus();
+    method @NonNull public String getNetworkStatusString();
+    method public boolean hasEverConnected();
+    field public static final int DISABLED_ASSOCIATION_REJECTION = 1; // 0x1
+    field public static final int DISABLED_AUTHENTICATION_FAILURE = 2; // 0x2
+    field public static final int DISABLED_AUTHENTICATION_NO_CREDENTIALS = 5; // 0x5
+    field public static final int DISABLED_AUTHENTICATION_NO_SUBSCRIPTION = 9; // 0x9
+    field public static final int DISABLED_AUTHENTICATION_PRIVATE_EAP_ERROR = 10; // 0xa
+    field public static final int DISABLED_BY_WIFI_MANAGER = 7; // 0x7
+    field public static final int DISABLED_BY_WRONG_PASSWORD = 8; // 0x8
+    field public static final int DISABLED_CONSECUTIVE_FAILURES = 12; // 0xc
+    field public static final int DISABLED_DHCP_FAILURE = 3; // 0x3
+    field public static final int DISABLED_NETWORK_NOT_FOUND = 11; // 0xb
+    field public static final int DISABLED_NONE = 0; // 0x0
+    field public static final int DISABLED_NO_INTERNET_PERMANENT = 6; // 0x6
+    field public static final int DISABLED_NO_INTERNET_TEMPORARY = 4; // 0x4
+    field public static final int DISABLED_TRANSITION_DISABLE_INDICATION = 13; // 0xd
+    field public static final int DISABLED_UNWANTED_LOW_RSSI = 14; // 0xe
+    field public static final int NETWORK_SELECTION_ENABLED = 0; // 0x0
+    field public static final int NETWORK_SELECTION_PERMANENTLY_DISABLED = 2; // 0x2
+    field public static final int NETWORK_SELECTION_TEMPORARY_DISABLED = 1; // 0x1
   }
 
-  @Deprecated public static final class WifiConfiguration.NetworkSelectionStatus.Builder {
-    ctor @Deprecated public WifiConfiguration.NetworkSelectionStatus.Builder();
-    method @Deprecated @NonNull public android.net.wifi.WifiConfiguration.NetworkSelectionStatus build();
-    method @Deprecated @NonNull public android.net.wifi.WifiConfiguration.NetworkSelectionStatus.Builder setNetworkSelectionDisableReason(int);
-    method @Deprecated @NonNull public android.net.wifi.WifiConfiguration.NetworkSelectionStatus.Builder setNetworkSelectionStatus(int);
+  public static final class WifiConfiguration.NetworkSelectionStatus.Builder {
+    ctor public WifiConfiguration.NetworkSelectionStatus.Builder();
+    method @NonNull public android.net.wifi.WifiConfiguration.NetworkSelectionStatus build();
+    method @NonNull public android.net.wifi.WifiConfiguration.NetworkSelectionStatus.Builder setNetworkSelectionDisableReason(int);
+    method @NonNull public android.net.wifi.WifiConfiguration.NetworkSelectionStatus.Builder setNetworkSelectionStatus(int);
   }
 
   public final class WifiConnectedSessionInfo implements android.os.Parcelable {
@@ -761,7 +760,7 @@ package android.net.wifi {
     field public static final int INVALID_RSSI = -127; // 0xffffff81
   }
 
-  public class WifiManager {
+  @RestrictedForEnvironment(environments=android.annotation.RestrictedForEnvironment.ENVIRONMENT_SDK_RUNTIME, from=android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) public class WifiManager {
     method @RequiresPermission(android.Manifest.permission.WIFI_UPDATE_USABILITY_STATS_SCORE) public void addOnWifiUsabilityStatsListener(@NonNull java.util.concurrent.Executor, @NonNull android.net.wifi.WifiManager.OnWifiUsabilityStatsListener);
     method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.MANAGE_WIFI_NETWORK_SELECTION}) public void addQosPolicies(@NonNull java.util.List<android.net.wifi.QosPolicyParams>, @NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<java.util.List<java.lang.Integer>>);
     method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.MANAGE_WIFI_NETWORK_SELECTION}) public void addWifiLowLatencyLockListener(@NonNull java.util.concurrent.Executor, @NonNull android.net.wifi.WifiManager.WifiLowLatencyLockListener);
@@ -826,7 +825,9 @@ package android.net.wifi {
     method @RequiresPermission(android.Manifest.permission.MANAGE_DEVICE_ADMINS) public void notifyWifiSsidPolicyChanged(@NonNull android.app.admin.WifiSsidPolicy);
     method public void queryD2dAllowedWhenInfraStaDisabled(@NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<java.lang.Boolean>);
     method @Nullable @RequiresPermission(android.Manifest.permission.NETWORK_SETTINGS) public void queryLastConfiguredTetheredApPassphraseSinceBoot(@NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<java.lang.String>);
+    method @RequiresPermission(allOf={android.Manifest.permission.NEARBY_WIFI_DEVICES, android.Manifest.permission.READ_WIFI_CREDENTIAL}) public void queryPrivilegedConfiguredNetworks(@NonNull java.util.concurrent.Executor, @NonNull android.os.OutcomeReceiver<java.util.List<android.net.wifi.WifiConfiguration>,java.lang.Exception>);
     method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.NETWORK_SETUP_WIZARD}) public void queryWepAllowed(@NonNull java.util.concurrent.Executor, @NonNull java.util.function.Consumer<java.lang.Boolean>);
+    method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.NETWORK_SETUP_WIZARD}) public void refreshMacRandomization(@IntRange(from=0) int);
     method @RequiresPermission(android.Manifest.permission.ACCESS_COARSE_LOCATION) public void registerActiveCountryCodeChangedCallback(@NonNull java.util.concurrent.Executor, @NonNull android.net.wifi.WifiManager.ActiveCountryCodeChangedCallback);
     method @RequiresPermission(android.Manifest.permission.WIFI_ACCESS_COEX_UNSAFE_CHANNELS) public void registerCoexCallback(@NonNull java.util.concurrent.Executor, @NonNull android.net.wifi.WifiManager.CoexCallback);
     method @RequiresPermission(android.Manifest.permission.NEARBY_WIFI_DEVICES) public void registerLocalOnlyHotspotSoftApCallback(@NonNull java.util.concurrent.Executor, @NonNull android.net.wifi.WifiManager.SoftApCallback);
@@ -867,6 +868,7 @@ package android.net.wifi {
     method @RequiresPermission(anyOf={android.Manifest.permission.MANAGE_WIFI_NETWORK_SELECTION, android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.NETWORK_SETUP_WIZARD}) public void setPnoScanState(int);
     method @RequiresPermission(android.Manifest.permission.NETWORK_SETTINGS) public void setScanAlwaysAvailable(boolean);
     method @RequiresPermission(android.Manifest.permission.NETWORK_SETTINGS) public void setScanThrottleEnabled(boolean);
+    method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.MANAGE_WIFI_NETWORK_SELECTION}) public void setScreenOffScanSchedule(@Nullable android.net.wifi.WifiManager.ScreenOffScanSchedule);
     method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.MANAGE_WIFI_NETWORK_SELECTION}) public void setScreenOnScanSchedule(@Nullable java.util.List<android.net.wifi.WifiManager.ScreenOnScanSchedule>);
     method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.OVERRIDE_WIFI_CONFIG}) public boolean setSoftApConfiguration(@NonNull android.net.wifi.SoftApConfiguration);
     method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.MANAGE_WIFI_NETWORK_SELECTION}, conditional=true) public void setSsidsAllowlist(@NonNull java.util.Set<android.net.wifi.WifiSsid>);
@@ -932,6 +934,7 @@ package android.net.wifi {
     field public static final int API_SET_NETWORK_SELECTION_CONFIG = 8; // 0x8
     field public static final int API_SET_ONE_SHOT_SCREEN_ON_CONNECTIVITY_SCAN_DELAY = 7; // 0x7
     field public static final int API_SET_PNO_SCAN_ENABLED = 36; // 0x24
+    field public static final int API_SET_PNO_SCAN_SCHEDULE = 38; // 0x26
     field public static final int API_SET_SCAN_SCHEDULE = 6; // 0x6
     field public static final int API_SET_TDLS_ENABLED = 34; // 0x22
     field public static final int API_SET_TDLS_ENABLED_WITH_MAC_ADDRESS = 35; // 0x23
@@ -1080,6 +1083,22 @@ package android.net.wifi {
     method public default void notifyStatusUpdate(int, boolean);
     method public default void requestNudOperation(int);
     method public void triggerUpdateOfWifiUsabilityStats(int);
+  }
+
+  public static class WifiManager.ScreenOffScanSchedule {
+    method @NonNull public java.time.Duration getMovingScanInterval();
+    method public int getScanIterations();
+    method public int getScanMultiplier();
+    method @NonNull public java.time.Duration getStationaryScanInterval();
+  }
+
+  public static final class WifiManager.ScreenOffScanSchedule.Builder {
+    ctor public WifiManager.ScreenOffScanSchedule.Builder();
+    method @NonNull public android.net.wifi.WifiManager.ScreenOffScanSchedule build();
+    method @NonNull public android.net.wifi.WifiManager.ScreenOffScanSchedule.Builder setMovingScanInterval(@NonNull java.time.Duration);
+    method @NonNull public android.net.wifi.WifiManager.ScreenOffScanSchedule.Builder setScanIterations(@IntRange(from=1) int);
+    method @NonNull public android.net.wifi.WifiManager.ScreenOffScanSchedule.Builder setScanMultiplier(@IntRange(from=1) int);
+    method @NonNull public android.net.wifi.WifiManager.ScreenOffScanSchedule.Builder setStationaryScanInterval(@NonNull java.time.Duration);
   }
 
   public static class WifiManager.ScreenOnScanSchedule {
@@ -1615,7 +1634,7 @@ package android.net.wifi.aware {
     method @NonNull public android.net.wifi.aware.SubscribeConfig.Builder setVendorData(@NonNull java.util.List<android.net.wifi.OuiKeyedData>);
   }
 
-  public class WifiAwareManager {
+  @RestrictedForEnvironment(environments=android.annotation.RestrictedForEnvironment.ENVIRONMENT_SDK_RUNTIME, from=android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) public class WifiAwareManager {
     method @RequiresPermission(allOf={android.Manifest.permission.ACCESS_WIFI_STATE, android.Manifest.permission.CHANGE_WIFI_STATE, android.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.NEARBY_WIFI_DEVICES, android.Manifest.permission.MANAGE_WIFI_NETWORK_SELECTION}, conditional=true) public void attach(@NonNull android.net.wifi.aware.ConfigRequest, @NonNull java.util.concurrent.Executor, @NonNull android.net.wifi.aware.AttachCallback, @NonNull android.net.wifi.aware.IdentityChangedListener);
     method @RequiresPermission(allOf={android.Manifest.permission.ACCESS_WIFI_STATE, android.Manifest.permission.CHANGE_WIFI_STATE, android.Manifest.permission.OVERRIDE_WIFI_CONFIG}) public void attachOffload(@NonNull java.util.concurrent.Executor, @NonNull android.net.wifi.aware.AttachCallback);
     method @RequiresPermission(allOf={android.Manifest.permission.CHANGE_WIFI_STATE, android.Manifest.permission.OVERRIDE_WIFI_CONFIG}) public void enableInstantCommunicationMode(boolean);
@@ -1746,7 +1765,7 @@ package android.net.wifi.p2p {
     field @NonNull public static final android.os.Parcelable.Creator<android.net.wifi.p2p.WifiP2pGroupList> CREATOR;
   }
 
-  public class WifiP2pManager {
+  @RestrictedForEnvironment(environments=android.annotation.RestrictedForEnvironment.ENVIRONMENT_SDK_RUNTIME, from=android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) public class WifiP2pManager {
     method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.NETWORK_STACK, android.Manifest.permission.OVERRIDE_WIFI_CONFIG}) public void deletePersistentGroup(@NonNull android.net.wifi.p2p.WifiP2pManager.Channel, int, @Nullable android.net.wifi.p2p.WifiP2pManager.ActionListener);
     method @RequiresPermission(android.Manifest.permission.NETWORK_SETTINGS) public void factoryReset(@NonNull android.net.wifi.p2p.WifiP2pManager.Channel, @Nullable android.net.wifi.p2p.WifiP2pManager.ActionListener);
     method @RequiresPermission(allOf={android.Manifest.permission.NETWORK_SETTINGS, android.Manifest.permission.NETWORK_STACK, android.Manifest.permission.READ_WIFI_CREDENTIAL, android.Manifest.permission.NEARBY_WIFI_DEVICES, android.Manifest.permission.ACCESS_FINE_LOCATION}, conditional=true) public void requestPersistentGroupInfo(@NonNull android.net.wifi.p2p.WifiP2pManager.Channel, @Nullable android.net.wifi.p2p.WifiP2pManager.PersistentGroupInfoListener);
@@ -1824,7 +1843,7 @@ package android.net.wifi.rtt {
     method public boolean getExtraInfoOnAssociationIndication();
   }
 
-  public class WifiRttManager {
+  @RestrictedForEnvironment(environments=android.annotation.RestrictedForEnvironment.ENVIRONMENT_SDK_RUNTIME, from=android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) public class WifiRttManager {
     method @RequiresPermission(allOf={android.Manifest.permission.LOCATION_HARDWARE}) public void cancelRanging(@Nullable android.os.WorkSource);
     method @RequiresPermission(allOf={android.Manifest.permission.LOCATION_HARDWARE, android.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.CHANGE_WIFI_STATE, android.Manifest.permission.ACCESS_WIFI_STATE, android.Manifest.permission.NEARBY_WIFI_DEVICES}, conditional=true) public void startRanging(@Nullable android.os.WorkSource, @NonNull android.net.wifi.rtt.RangingRequest, @NonNull java.util.concurrent.Executor, @NonNull android.net.wifi.rtt.RangingResultCallback);
   }
@@ -1835,7 +1854,7 @@ package android.net.wifi.twt {
 
   public final class TwtRequest implements android.os.Parcelable {
     method public int describeContents();
-    method @IntRange(from=android.net.wifi.MloLink.INVALID_MLO_LINK_ID, to=0xf) public int getLinkId();
+    method @IntRange(from=android.net.wifi.MloLink.INVALID_MLO_LINK_ID, to=android.net.wifi.MloLink.MAX_MLO_LINK_ID) public int getLinkId();
     method public int getMaxWakeDurationMicros();
     method public long getMaxWakeIntervalMicros();
     method public int getMinWakeDurationMicros();
@@ -1847,7 +1866,7 @@ package android.net.wifi.twt {
   public static final class TwtRequest.Builder {
     ctor public TwtRequest.Builder(int, int, long, long);
     method @NonNull public android.net.wifi.twt.TwtRequest build();
-    method @NonNull public android.net.wifi.twt.TwtRequest.Builder setLinkId(@IntRange(from=0x0, to=0xf) int);
+    method @NonNull public android.net.wifi.twt.TwtRequest.Builder setLinkId(@IntRange(from=android.net.wifi.MloLink.MIN_MLO_LINK_ID, to=android.net.wifi.MloLink.MAX_MLO_LINK_ID) int);
   }
 
   public interface TwtSession {
