@@ -5921,8 +5921,14 @@ Lcom/android/wifi/x/android/sysprop/BackportedFixesProperties$$ExternalSynthetic
 Lcom/android/wifi/x/android/sysprop/BluetoothProperties$$ExternalSyntheticLambda0;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/wifi/x/android/sysprop/BluetoothProperties$$ExternalSyntheticLambda1;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/wifi/x/android/sysprop/BluetoothProperties$$ExternalSyntheticLambda2;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/wifi/x/android/sysprop/BluetoothProperties$$ExternalSyntheticLambda3;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/wifi/x/android/sysprop/BluetoothProperties$$ExternalSyntheticLambda4;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/wifi/x/android/sysprop/BluetoothProperties$$ExternalSyntheticLambda5;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/wifi/x/android/sysprop/BluetoothProperties$$ExternalSyntheticLambda6;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/wifi/x/android/sysprop/MediaProperties$$ExternalSyntheticLambda0;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/wifi/x/android/sysprop/NfcProperties$$ExternalSyntheticLambda0;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/wifi/x/android/sysprop/NfcProperties$$ExternalSyntheticLambda1;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/wifi/x/android/sysprop/NfcProperties$$ExternalSyntheticLambda2;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/wifi/x/android/sysprop/TelephonyProperties$$ExternalSyntheticLambda0;->apply(Ljava/lang/Object;)Ljava/lang/Object;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/wifi/x/com/android/internal/util/AsyncChannel$1ConnectAsync;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/wifi/x/com/android/internal/util/AsyncChannel$AsyncChannelConnection;->onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V,public-api,sdk,system-api,test-api
