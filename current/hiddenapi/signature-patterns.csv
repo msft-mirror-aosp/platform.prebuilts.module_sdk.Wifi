@@ -15,7 +15,6 @@ android/net/wifi/IInterfaceCreationInfoCallback
 android/net/wifi/ILastCallerListener
 android/net/wifi/IListListener
 android/net/wifi/ILocalOnlyConnectionStatusListener
-android/net/wifi/ILocalOnlyDisconnectionStatusListener
 android/net/wifi/ILocalOnlyHotspotCallback
 android/net/wifi/IMacAddressListListener
 android/net/wifi/IMapListener
