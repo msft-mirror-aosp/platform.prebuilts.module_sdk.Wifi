@@ -95,7 +95,7 @@ java_import {
     ],
     licenses: ["wifi-module-sdk_Android-Apache-2.0"],
     jars: ["java_systemserver_libs/snapshot/jars/are/invalid/service-wifi.jar"],
-    min_sdk_version: "30",
+    min_sdk_version: "31",
 }
 
 license {
