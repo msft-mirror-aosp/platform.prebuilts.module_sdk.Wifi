@@ -26,6 +26,9 @@ prebuilt_bootclasspath_fragment {
             module: "art-bootclasspath-fragment",
         },
     ],
+    dex_preopt: {
+        profile_guided: true,
+    },
     hidden_api: {
         unsupported: ["hiddenapi/hiddenapi-unsupported.txt"],
         max_target_r_low_priority: ["hiddenapi/hiddenapi-max-target-r-low-priority.txt"],
@@ -95,7 +98,7 @@ java_import {
     ],
     licenses: ["wifi-module-sdk_Android-Apache-2.0"],
     jars: ["java_systemserver_libs/snapshot/jars/are/invalid/service-wifi.jar"],
-    min_sdk_version: "30",
+    min_sdk_version: "31",
 }
 
 license {
